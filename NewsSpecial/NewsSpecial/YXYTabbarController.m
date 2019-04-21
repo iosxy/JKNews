@@ -32,7 +32,7 @@
     MineViewController * mine = [[MineViewController alloc]init];
     NSMutableArray * array = [NSMutableArray arrayWithObjects:home,class,cart,mine, nil];
     //标题
-    NSArray * titlesArr = @[@"首页", @"星闻 ", @"星程",@"我的"];
+    NSArray * titlesArr = @[@"星趣", @"星闻 ", @"星程",@"我的"];
     //图片
     NSArray * normalImages = @[@"首页", @"爱豆星闻", @"行程",@"我的"];
     NSArray * selectImages = @[@"首页-1", @"爱豆星闻-1", @"行程-1",@"我的-1"];

@@ -22,7 +22,6 @@
 		063B214B2269AC2E00F3EDFB /* UploadHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */; };
 		063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B21392269AC2E00F3EDFB /* DataCel1l.xib */; };
 		063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */; };
-		063B21522269B54B00F3EDFB /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */; };
 		063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */; };
 		063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 063B21592269CFE500F3EDFB /* YSchedulingTableViewCell.m */; };
 		06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F1B22672FBE00E857E2 /* AppDelegate.m */; };
@@ -48,6 +47,24 @@
 		06811F692267325300E857E2 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F552267325300E857E2 /* YLImageView.m */; };
 		06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F582267325300E857E2 /* YCHNetworking.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
+		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
+		93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E73E226C90C5005B3B73 /* StarBallViewController.m */; };
+		93E1E742226C90DE005B3B73 /* StarRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E741226C90DE005B3B73 /* StarRankingViewController.m */; };
+		93E1E745226C90E9005B3B73 /* StarEightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E744226C90E9005B3B73 /* StarEightViewController.m */; };
+		93E1E748226C90F2005B3B73 /* StarLittleVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */; };
+		93E1E74B226C9292005B3B73 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E74A226C9292005B3B73 /* DemoViewController.m */; };
+		93E1E753226C9534005B3B73 /* StarBallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E751226C9534005B3B73 /* StarBallCell.m */; };
+		93E1E754226C9534005B3B73 /* StarBallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E1E752226C9534005B3B73 /* StarBallCell.xib */; };
+		93E1E758226C9830005B3B73 /* UIImageView+setImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E757226C9830005B3B73 /* UIImageView+setImage.m */; };
+		93E1E75B226C9841005B3B73 /* UIView+clipCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E75A226C9841005B3B73 /* UIView+clipCorner.m */; };
+		93E1E75E226C9860005B3B73 /* UICollectionView+demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E75D226C9860005B3B73 /* UICollectionView+demo.m */; };
+		93E1E761226C986F005B3B73 /* UITableView+demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E760226C986F005B3B73 /* UITableView+demo.m */; };
+		93E1E765226C9F97005B3B73 /* StarRangkingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E763226C9F97005B3B73 /* StarRangkingCell.m */; };
+		93E1E766226C9F97005B3B73 /* StarRangkingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E1E764226C9F97005B3B73 /* StarRangkingCell.xib */; };
+		93E1E76A226CA5E7005B3B73 /* StarEightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E768226CA5E7005B3B73 /* StarEightTableViewCell.m */; };
+		93E1E76B226CA5E7005B3B73 /* StarEightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E1E769226CA5E7005B3B73 /* StarEightTableViewCell.xib */; };
+		93E1E76F226CA80C005B3B73 /* LittleVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E76D226CA80C005B3B73 /* LittleVideoTableViewCell.m */; };
+		93E1E770226CA80C005B3B73 /* LittleVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93E1E76E226CA80C005B3B73 /* LittleVideoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +95,6 @@
 		063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSignatureVC.h; sourceTree = "<group>"; };
 		063B213D2269AC2E00F3EDFB /* ChangeNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNameVC.h; sourceTree = "<group>"; };
 		063B213E2269AC2E00F3EDFB /* MineTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell1.h; sourceTree = "<group>"; };
-		063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YPhotoTableViewCell.m; path = "../../../../Product-PEWindow 2/Product-PEWindow/Game/View/YPhotoTableViewCell.m"; sourceTree = "<group>"; };
-		063B21512269B54B00F3EDFB /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YPhotoTableViewCell.h; path = "../../../../Product-PEWindow 2/Product-PEWindow/Game/View/YPhotoTableViewCell.h"; sourceTree = "<group>"; };
 		063B21532269BE0200F3EDFB /* YLittlePhotoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLittlePhotoTableViewCell.h; sourceTree = "<group>"; };
 		063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLittlePhotoTableViewCell.m; sourceTree = "<group>"; };
 		063B21582269CFE500F3EDFB /* YSchedulingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSchedulingTableViewCell.h; sourceTree = "<group>"; };
@@ -126,6 +141,38 @@
 		06811F572267325300E857E2 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
 		06811F582267325300E857E2 /* YCHNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHNetworking.m; sourceTree = "<group>"; };
 		06811F982267329A00E857E2 /* News.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.pch; sourceTree = "<group>"; };
+		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
+		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
+		93E1E73D226C90C5005B3B73 /* StarBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallViewController.h; sourceTree = "<group>"; };
+		93E1E73E226C90C5005B3B73 /* StarBallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallViewController.m; sourceTree = "<group>"; };
+		93E1E740226C90DE005B3B73 /* StarRankingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarRankingViewController.h; sourceTree = "<group>"; };
+		93E1E741226C90DE005B3B73 /* StarRankingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRankingViewController.m; sourceTree = "<group>"; };
+		93E1E743226C90E9005B3B73 /* StarEightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarEightViewController.h; sourceTree = "<group>"; };
+		93E1E744226C90E9005B3B73 /* StarEightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightViewController.m; sourceTree = "<group>"; };
+		93E1E746226C90F2005B3B73 /* StarLittleVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarLittleVideoViewController.h; sourceTree = "<group>"; };
+		93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarLittleVideoViewController.m; sourceTree = "<group>"; };
+		93E1E749226C9292005B3B73 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		93E1E74A226C9292005B3B73 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		93E1E750226C9534005B3B73 /* StarBallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallCell.h; sourceTree = "<group>"; };
+		93E1E751226C9534005B3B73 /* StarBallCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallCell.m; sourceTree = "<group>"; };
+		93E1E752226C9534005B3B73 /* StarBallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarBallCell.xib; sourceTree = "<group>"; };
+		93E1E756226C9830005B3B73 /* UIImageView+setImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+setImage.h"; sourceTree = "<group>"; };
+		93E1E757226C9830005B3B73 /* UIImageView+setImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+setImage.m"; sourceTree = "<group>"; };
+		93E1E759226C9841005B3B73 /* UIView+clipCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+clipCorner.h"; sourceTree = "<group>"; };
+		93E1E75A226C9841005B3B73 /* UIView+clipCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+clipCorner.m"; sourceTree = "<group>"; };
+		93E1E75C226C9860005B3B73 /* UICollectionView+demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+demo.h"; sourceTree = "<group>"; };
+		93E1E75D226C9860005B3B73 /* UICollectionView+demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+demo.m"; sourceTree = "<group>"; };
+		93E1E75F226C986F005B3B73 /* UITableView+demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+demo.h"; sourceTree = "<group>"; };
+		93E1E760226C986F005B3B73 /* UITableView+demo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+demo.m"; sourceTree = "<group>"; };
+		93E1E762226C9F97005B3B73 /* StarRangkingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarRangkingCell.h; sourceTree = "<group>"; };
+		93E1E763226C9F97005B3B73 /* StarRangkingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRangkingCell.m; sourceTree = "<group>"; };
+		93E1E764226C9F97005B3B73 /* StarRangkingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarRangkingCell.xib; sourceTree = "<group>"; };
+		93E1E767226CA5E7005B3B73 /* StarEightTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarEightTableViewCell.h; sourceTree = "<group>"; };
+		93E1E768226CA5E7005B3B73 /* StarEightTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightTableViewCell.m; sourceTree = "<group>"; };
+		93E1E769226CA5E7005B3B73 /* StarEightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarEightTableViewCell.xib; sourceTree = "<group>"; };
+		93E1E76C226CA80C005B3B73 /* LittleVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LittleVideoTableViewCell.h; sourceTree = "<group>"; };
+		93E1E76D226CA80C005B3B73 /* LittleVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LittleVideoTableViewCell.m; sourceTree = "<group>"; };
+		93E1E76E226CA80C005B3B73 /* LittleVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LittleVideoTableViewCell.xib; sourceTree = "<group>"; };
 		A23B081A4EC4593C81526C36 /* Pods-NewsSpecial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSpecial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsSpecial/Pods-NewsSpecial.debug.xcconfig"; sourceTree = "<group>"; };
 		AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsSpecial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBF95D08F554A66AE18D040 /* Pods-NewsSpecial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsSpecial.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsSpecial/Pods-NewsSpecial.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,8 +249,8 @@
 		063B214F2269B53B00F3EDFB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				063B21512269B54B00F3EDFB /* YPhotoTableViewCell.h */,
-				063B21502269B54B00F3EDFB /* YPhotoTableViewCell.m */,
+				93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */,
+				93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */,
 				063B21532269BE0200F3EDFB /* YLittlePhotoTableViewCell.h */,
 				063B21542269BE0200F3EDFB /* YLittlePhotoTableViewCell.m */,
 			);
@@ -248,6 +295,10 @@
 		06811F1922672FBE00E857E2 /* NewsSpecial */ = {
 			isa = PBXGroup;
 			children = (
+				93E1E755226C97B1005B3B73 /* Tools */,
+				93E1E749226C9292005B3B73 /* DemoViewController.h */,
+				93E1E74A226C9292005B3B73 /* DemoViewController.m */,
+				93E1E73C226C901B005B3B73 /* Main */,
 				063B21562269CFA500F3EDFB /* Cart */,
 				06811F982267329A00E857E2 /* News.pch */,
 				063B214E2269B52800F3EDFB /* Class */,
@@ -330,6 +381,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		93E1E73C226C901B005B3B73 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				93E1E74C226C9509005B3B73 /* Views */,
+				93E1E73D226C90C5005B3B73 /* StarBallViewController.h */,
+				93E1E73E226C90C5005B3B73 /* StarBallViewController.m */,
+				93E1E740226C90DE005B3B73 /* StarRankingViewController.h */,
+				93E1E741226C90DE005B3B73 /* StarRankingViewController.m */,
+				93E1E743226C90E9005B3B73 /* StarEightViewController.h */,
+				93E1E744226C90E9005B3B73 /* StarEightViewController.m */,
+				93E1E746226C90F2005B3B73 /* StarLittleVideoViewController.h */,
+				93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		93E1E74C226C9509005B3B73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93E1E750226C9534005B3B73 /* StarBallCell.h */,
+				93E1E751226C9534005B3B73 /* StarBallCell.m */,
+				93E1E752226C9534005B3B73 /* StarBallCell.xib */,
+				93E1E762226C9F97005B3B73 /* StarRangkingCell.h */,
+				93E1E763226C9F97005B3B73 /* StarRangkingCell.m */,
+				93E1E764226C9F97005B3B73 /* StarRangkingCell.xib */,
+				93E1E767226CA5E7005B3B73 /* StarEightTableViewCell.h */,
+				93E1E768226CA5E7005B3B73 /* StarEightTableViewCell.m */,
+				93E1E769226CA5E7005B3B73 /* StarEightTableViewCell.xib */,
+				93E1E76C226CA80C005B3B73 /* LittleVideoTableViewCell.h */,
+				93E1E76D226CA80C005B3B73 /* LittleVideoTableViewCell.m */,
+				93E1E76E226CA80C005B3B73 /* LittleVideoTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93E1E755226C97B1005B3B73 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				93E1E756226C9830005B3B73 /* UIImageView+setImage.h */,
+				93E1E757226C9830005B3B73 /* UIImageView+setImage.m */,
+				93E1E759226C9841005B3B73 /* UIView+clipCorner.h */,
+				93E1E75A226C9841005B3B73 /* UIView+clipCorner.m */,
+				93E1E75C226C9860005B3B73 /* UICollectionView+demo.h */,
+				93E1E75D226C9860005B3B73 /* UICollectionView+demo.m */,
+				93E1E75F226C986F005B3B73 /* UITableView+demo.h */,
+				93E1E760226C986F005B3B73 /* UITableView+demo.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		A06E35ADE0FF602E55B509CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,14 +500,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				063B21462269AC2E00F3EDFB /* MineTableViewCell1.xib in Resources */,
+				93E1E76B226CA5E7005B3B73 /* StarEightTableViewCell.xib in Resources */,
 				063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */,
 				06811F2722672FC000E857E2 /* LaunchScreen.storyboard in Resources */,
 				06811F2422672FC000E857E2 /* Assets.xcassets in Resources */,
+				93E1E766226C9F97005B3B73 /* StarRangkingCell.xib in Resources */,
 				06811F2222672FBE00E857E2 /* Main.storyboard in Resources */,
 				063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */,
+				93E1E754226C9534005B3B73 /* StarBallCell.xib in Resources */,
 				063B21482269AC2E00F3EDFB /* MineTableViewCell2.xib in Resources */,
 				06811F632267325300E857E2 /* sdRefeshView_arrow@2x.png in Resources */,
 				06811F672267325300E857E2 /* 下拉刷新动态.gif in Resources */,
+				93E1E770226CA80C005B3B73 /* LittleVideoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,17 +570,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				063B21442269AC2E00F3EDFB /* EditSignatureVC.m in Sources */,
+				93E1E76F226CA80C005B3B73 /* LittleVideoTableViewCell.m in Sources */,
 				06811F5D2267325300E857E2 /* UIView+Additions.m in Sources */,
 				06811F622267325300E857E2 /* SDRefreshHeaderView.m in Sources */,
 				063B214B2269AC2E00F3EDFB /* UploadHeaderCell.m in Sources */,
+				93E1E761226C986F005B3B73 /* UITableView+demo.m in Sources */,
+				93E1E748226C90F2005B3B73 /* StarLittleVideoViewController.m in Sources */,
+				93E1E742226C90DE005B3B73 /* StarRankingViewController.m in Sources */,
 				063B21402269AC2E00F3EDFB /* UIView+ViewController.m in Sources */,
+				93E1E75E226C9860005B3B73 /* UICollectionView+demo.m in Sources */,
 				06811F5F2267325300E857E2 /* ClassViewController.m in Sources */,
+				93E1E75B226C9841005B3B73 /* UIView+clipCorner.m in Sources */,
 				063B21452269AC2E00F3EDFB /* MineTableViewCell2.m in Sources */,
+				93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */,
 				06811F5E2267325300E857E2 /* FirstViewController.m in Sources */,
+				93E1E745226C90E9005B3B73 /* StarEightViewController.m in Sources */,
 				06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */,
 				06811F5B2267325300E857E2 /* UIView+MBProgressHUD.m in Sources */,
 				063B21422269AC2E00F3EDFB /* NinaBaseView.m in Sources */,
+				93E1E74B226C9292005B3B73 /* DemoViewController.m in Sources */,
 				06811F612267325300E857E2 /* CartViewController.m in Sources */,
+				93E1E765226C9F97005B3B73 /* StarRangkingCell.m in Sources */,
 				06811F692267325300E857E2 /* YLImageView.m in Sources */,
 				06811F682267325300E857E2 /* YLGIFImage.m in Sources */,
 				063B214A2269AC2E00F3EDFB /* EditDataVC.m in Sources */,
@@ -483,14 +598,17 @@
 				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
 				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
+				93E1E753226C9534005B3B73 /* StarBallCell.m in Sources */,
 				06811F2A22672FC000E857E2 /* main.m in Sources */,
 				06811F652267325300E857E2 /* SDRefreshFooterView.m in Sources */,
 				06811F5A2267325300E857E2 /* MineViewController.m in Sources */,
+				93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */,
 				06811F662267325300E857E2 /* SDRefreshView.m in Sources */,
 				063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */,
-				063B21522269B54B00F3EDFB /* YPhotoTableViewCell.m in Sources */,
+				93E1E758226C9830005B3B73 /* UIImageView+setImage.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
 				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,
+				93E1E76A226CA5E7005B3B73 /* StarEightTableViewCell.m in Sources */,
 				06811F592267325300E857E2 /* YXYTabbarController.m in Sources */,
 				063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */,
 				063B213F2269AC2E00F3EDFB /* chargeVC.m in Sources */,

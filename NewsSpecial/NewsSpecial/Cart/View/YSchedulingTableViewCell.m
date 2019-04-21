@@ -40,7 +40,7 @@
     [self.contentView addSubview:self.lineView];
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self.contentView);
-        make.left.equalTo(self.contentView).offset(60);
+        make.left.equalTo(self.contentView).offset(90);
         make.width.equalTo(@1);
     }];
     

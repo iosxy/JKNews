@@ -10,7 +10,10 @@
 #import "FirstViewController.h"
 #import "NinaPagerView.h"
 #import "MineViewController.h"
-
+#import "StarBallViewController.h"
+#import "StarRankingViewController.h"
+#import "StarEightViewController.h"
+#import "StarLittleVideoViewController.h"
 
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
@@ -26,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     [self configData];
 }
 - (void)configUI
@@ -38,21 +41,7 @@
 - (void)configData
 {
     [self configUI];
-//    @weakify(self)
-//    [[BJAFNetwork shareManager]POST:API_URL_SERVER method: BJ_queryVideoChannelByShow parameters:@{} success:^(NSURLSessionDataTask * _Nullable dataTask, id  _Nonnull respone) {
-//        @strongify(self)
-//        if (CODE_JUDGE) {
-//            if ([respone[@"data"][@"channelVOS"] isKindOfClass:[NSArray class]]) {
-//                NSArray * channelArr = respone[@"data"][@"channelVOS"];
-//                [self.channelArr addObjectsFromArray:[BJVideoTypeModel mj_objectArrayWithKeyValuesArray:channelArr]];
-//                [self configUI];
-//            }
-//        }else{
-//            [BJMBPManager showToast:respone[@"subMessage"] currentView:self.view];
-//        }
-//    } failure:^(NSURLSessionDataTask * _Nullable dataTask, NSError * _Nonnull error) {
-//
-//    }];
+
 }
 
 #pragma mark - LazyLoad
@@ -79,18 +68,10 @@
     return _ninaPagerView;
 }
 - (NSArray *)ninaTitleArray {
-//
-//    if (self.channelArr.count) {
-//        NSMutableArray * titleArr = [NSMutableArray array];
-//        //        [titleArr addObject:@"推荐"];
-//        for (BJVideoTypeModel * model in self.channelArr) {
-//            [titleArr addObject:model.channelName];
-//        }
-//        return titleArr;
-//    }
-    return @[@"模仿",
-             @"娱乐",
-             @"生活",
+
+    return @[@"星球",
+             @"星榜",
+             @"星八卦",
              @"小视频"
              ];
 }
@@ -104,58 +85,30 @@
 - (NSArray *)ninaDetailVCsArray {
     NSMutableArray * viewControllers = [NSMutableArray array];
     
-//    if (self.channelArr.count) {
-//
-//        //        BJLifeViewController *recommend = [[BJLifeViewController alloc] init];
-//        //        recommend.isRecommend = YES;
-//        //        [viewControllers addObject:recommend];
-//        for (BJVideoTypeModel * model in self.channelArr) {
-////            if ([model.channelName isEqualToString:@"小视频"]) {
-////                BJLittleVideoViewController * forthCrunVC = [[BJLittleVideoViewController alloc]init];
-////                forthCrunVC.channelId = model.channelId;
-////                [viewControllers addObject:forthCrunVC];
-////            }else{
-////
-////            }
-//            MineViewController *firstCrunVC = [[MineViewController alloc] init];
-//            [viewControllers addObject:firstCrunVC];
-//        }
-//        return  viewControllers;
-//    }
-//    BJLifeViewController *firstCrunVC = [[BJLifeViewController alloc] init];
-//    BJLifeViewController *secondCrunVC = [[BJLifeViewController alloc] init];
-//    BJLifeViewController *threeCrunVC = [[BJLifeViewController alloc] init];
-//    BJLittleVideoViewController * forthCrunVC = [[BJLittleVideoViewController alloc]init];
-    MineViewController *firstCrunVC = [[MineViewController alloc] init];
-    [viewControllers addObject:firstCrunVC];
-//    return @[
-//             firstCrunVC,
-//             secondCrunVC,
-//             threeCrunVC,
-//             forthCrunVC,
-//             ];
+    
+    StarBallViewController * vc1 = [[StarBallViewController alloc]init];
+    StarRankingViewController * vc2 = [[StarRankingViewController alloc]init];
+
+    StarEightViewController * vc3 = [[StarEightViewController alloc]init];
+
+    StarLittleVideoViewController * vc4 = [[StarLittleVideoViewController alloc]init];
+
+
+    [viewControllers addObject:vc1];
+    [viewControllers addObject:vc2];
+    [viewControllers addObject:vc3];
+    [viewControllers addObject:vc4];
+    
+    
+    
     return  viewControllers;
 }
 
 - (void)ninaCurrentPageIndex:(NSInteger)currentPage currentObject:(id)currentObject lastObject:(id)lastObject
 {
-//    [[BJVideoPlayView shared]resetPlayer];
+
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
