@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong)UIView  * bjView;
 @property(nonatomic,strong)UIImageView * contentImage;
 @property(nonatomic,strong)UIImageView * dianImageView;
+@property(nonatomic,strong)UIImageView * didianImageView;
 @property(nonatomic,strong)UIView  * lineView;
 @property(nonatomic,strong)UILabel * titleLabel;
 @property(nonatomic,strong)UILabel * addressLabel;

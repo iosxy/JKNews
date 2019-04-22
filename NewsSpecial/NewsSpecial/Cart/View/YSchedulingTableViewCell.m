@@ -31,7 +31,7 @@
     [self.contentView addSubview:timeLabel];
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.centerY.equalTo(self.contentView.mas_centerY).offset(-8);
         make.left.equalTo(self.contentView.mas_left).offset(10);
     }];
     
@@ -40,9 +40,18 @@
     [self.contentView addSubview:self.lineView];
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self.contentView);
-        make.left.equalTo(self.contentView).offset(90);
+        make.left.equalTo(self.contentView).offset(65);
         make.width.equalTo(@1);
     }];
+    self.dianImageView = [[UIImageView alloc]init];
+    self.dianImageView.image = [UIImage imageNamed:@"时间轴圆点"];
+    [self.contentView addSubview:self.dianImageView];
+    [self.dianImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.lineView.mas_centerY).offset(-8);
+        make.width.height.equalTo(@20);
+        make.centerX.equalTo(self.lineView.mas_centerX);
+    }];
+    
     
     UIView * bjView = [[UIView alloc]init];
     self.bjView = bjView;
@@ -50,7 +59,7 @@
     bjView.backgroundColor = [UIColor whiteColor];
     [bjView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.contentView).offset(10);
-        make.left.equalTo(self.lineView.mas_right).offset(10);
+        make.left.equalTo(self.lineView.mas_right).offset(20);
         make.right.equalTo(self.contentView).offset(-15);
         make.bottom.equalTo(self.contentView).offset(-10);
     }];
@@ -79,6 +88,10 @@
     authorLabel.textColor = RGB(0x999999);
     [bjView addSubview:authorLabel];
 
+    UIImageView * didianImageView = [[UIImageView alloc]init];
+    didianImageView.image = [UIImage imageNamed:@"地点"];
+    self.didianImageView = didianImageView;
+    [bjView addSubview:self.didianImageView];
     [self setUpConstrains];
 }
 - (void)setUpConstrains {
@@ -94,10 +107,15 @@
         make.left.equalTo(self.bjView.mas_left).offset(10);
         make.right.equalTo(self.contentImage.mas_left).offset(-10);
     }];
-    [self.addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.titleLabel.mas_bottom).offset(8);
+    [self.didianImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.bjView.mas_left).offset(10);
         make.bottom.equalTo(self.bjView.mas_bottom).offset(-10);
+        make.height.width.equalTo(@15);
+    }];
+    [self.addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.titleLabel.mas_bottom).offset(8);
+        make.left.equalTo(self.didianImageView.mas_right).offset(5);
+        make.centerY.equalTo(self.didianImageView.mas_centerY);
     }];
     
 }
@@ -106,8 +124,7 @@
     self.titleLabel.text = data[@"title"];
     self.addressLabel.text = data[@"address"];
     NSMutableString * timeStr = [NSMutableString stringWithFormat:@"%@",data[@"dateStr"]];
-//    self.timeLabel.text = [self getTimeFromTimestamp:timeStr.doubleValue];
-    self.timeLabel.text = timeStr;
+    self.timeLabel.text = [timeStr substringFromIndex:5];
 }
 #pragma mark ---- 将时间戳转换成时间
 
