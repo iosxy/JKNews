@@ -33,9 +33,6 @@
     [self addDataSource];
     [self addTableView];
     
-    
-    
-    
 }
 - (void)addDataSource
 {
@@ -99,6 +96,7 @@
         //个人信息
         _editDataVC = [[EditDataVC alloc]init];
         _editDataVC.title = @"个人信息";
+        _editDataVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:_editDataVC animated:YES];
         
     }else if (indexPath.section == 1 && indexPath.row == 0)

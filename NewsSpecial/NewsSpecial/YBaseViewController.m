@@ -30,7 +30,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(YreloadData)];
-    self.tableView.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(YloadMoreData)];
+    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(YloadMoreData)];
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(self.view);
