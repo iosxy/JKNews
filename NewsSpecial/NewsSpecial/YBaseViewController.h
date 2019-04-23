@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YBaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic) UITableView *tableView;
 @property(nonatomic) NSMutableArray *dataList;
+- (void)YreloadData;
+- (void)YloadMoreData;
 @end
 
 NS_ASSUME_NONNULL_END

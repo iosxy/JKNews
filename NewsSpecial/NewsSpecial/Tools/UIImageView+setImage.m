@@ -11,7 +11,18 @@
 @implementation UIImageView (setImage)
 - (void)ysd_setImageWithString:(NSString *)url{
     
-    if ([url containsString:@"http"]) {
+    if ([url containsString:@".webp"]) {
+        
+        NSMutableString * newUrl = [[NSMutableString alloc]initWithString:url];
+        
+       url =  [newUrl stringByReplacingOccurrencesOfString:@".webp" withString:@""];
+        
+       
+        
+    }
+    
+    
+    if (![url containsString:@"http"]) {
         
         url = [NSString stringWithFormat:@"%@%@",YW_URL_IMAGE,url];
         

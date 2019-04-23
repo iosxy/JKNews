@@ -9,6 +9,8 @@
 
 #import "YBaseViewController.h"
 
+
+
 @interface YBaseViewController ()
 
 @end
@@ -26,7 +28,19 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(YreloadData)];
+    self.tableView.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(YloadMoreData)];
     [self.view addSubview:_tableView];
+}
+
+- (void)YreloadData{
+    
+    
+    
+}
+- (void)YloadMoreData{
+    
+    
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
