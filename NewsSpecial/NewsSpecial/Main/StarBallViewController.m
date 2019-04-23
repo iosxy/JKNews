@@ -43,6 +43,7 @@
         make.edges.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.view).offset(-94);
     }];
+    [self reloadData];
     _collectionView.header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
         _pageNo = 1;
         [self reloadData];
@@ -55,27 +56,24 @@
 }
 
 - (void)reloadData{
-    
-    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/listStar" andParamter:@{@"pageNo":@"1",@"pageSize" : @"20"} returnData:^(NSData *data, NSError *error) {
+//    ["tagId":0 , "pageNo":pageNo , "pageSize":10  , "starName":"","userId":"" , "letter" : self.letterString,"deviceToken" : HRAPI_NEW.getDeviceToken()
+    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/listStar" andParamter:@{@"pageNo":@"1",@"pageSize" : @"20" , @"tagId" : @"0" , @"starName" : @"",@"letter" : @"" , @"deviceToken" : @"123"} returnData:^(NSData *data, NSError *error) {
         [_collectionView.header endRefreshing];
         [_collectionView.footer endRefreshing];
         if (!error){
             NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-//            NSLog(dic);
+            if (_pageNo == 1) {
+                [self.dataList removeAllObjects];
+                
+            }
+            [self.tableView.header endRefreshing];
+            [self.tableView.footer endRefreshing];
             
-            NSLog([NSString stringWithFormat:@"%@",dic]);
-            
-            
-            
+            [self.dataList addObjectsFromArray:dic[@"data"][@"list"][@"list"]];
+            [self.collectionView reloadData];
         }
         
-        
-        
-        
-        
     }];
-    
-    
     
 }
 
@@ -83,13 +81,15 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     StarBallCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
+    NSDictionary * dic = self.dataList[indexPath.row];
+    cell.titleLabel.text = dic[@"name"];
+    [cell.contentImageView ysd_setImageWithString:dic[@"avatar"]];
     return cell;
     
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return  10;
+    return  self.dataList.count;
 }
 
 
