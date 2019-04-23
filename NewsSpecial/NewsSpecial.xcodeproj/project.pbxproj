@@ -51,6 +51,12 @@
 		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
+		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
+		93C8A4DB226F6184000DC9F7 /* MovieDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C8A4D9226F6184000DC9F7 /* MovieDetailView.xib */; };
+		93C8A4DF226F6628000DC9F7 /* StarRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */; };
+		93C8A4E3226F67DA000DC9F7 /* YuwanCardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */; };
+		93C8A4E4226F67DA000DC9F7 /* YuwanCardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */; };
+		93C8A4E7226F68CE000DC9F7 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */; };
 		93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E73E226C90C5005B3B73 /* StarBallViewController.m */; };
 		93E1E742226C90DE005B3B73 /* StarRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E741226C90DE005B3B73 /* StarRankingViewController.m */; };
 		93E1E745226C90E9005B3B73 /* StarEightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E744226C90E9005B3B73 /* StarEightViewController.m */; };
@@ -151,6 +157,15 @@
 		1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarBallDetailViewController.xib; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
+		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
+		93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		93C8A4D9226F6184000DC9F7 /* MovieDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailView.xib; sourceTree = "<group>"; };
+		93C8A4DC226F6628000DC9F7 /* StarRankingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarRankingDetailViewController.h; sourceTree = "<group>"; };
+		93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRankingDetailViewController.m; sourceTree = "<group>"; };
+		93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuwanCardHeaderView.swift; sourceTree = "<group>"; };
+		93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YuwanCardHeaderView.xib; sourceTree = "<group>"; };
+		93C8A4E5226F68CE000DC9F7 /* StarEightDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarEightDetailViewController.h; sourceTree = "<group>"; };
+		93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightDetailViewController.m; sourceTree = "<group>"; };
 		93E1E73D226C90C5005B3B73 /* StarBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallViewController.h; sourceTree = "<group>"; };
 		93E1E73E226C90C5005B3B73 /* StarBallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallViewController.m; sourceTree = "<group>"; };
 		93E1E740226C90DE005B3B73 /* StarRankingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarRankingViewController.h; sourceTree = "<group>"; };
@@ -402,8 +417,12 @@
 				1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */,
 				93E1E740226C90DE005B3B73 /* StarRankingViewController.h */,
 				93E1E741226C90DE005B3B73 /* StarRankingViewController.m */,
+				93C8A4DC226F6628000DC9F7 /* StarRankingDetailViewController.h */,
+				93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */,
 				93E1E743226C90E9005B3B73 /* StarEightViewController.h */,
 				93E1E744226C90E9005B3B73 /* StarEightViewController.m */,
+				93C8A4E5226F68CE000DC9F7 /* StarEightDetailViewController.h */,
+				93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */,
 				93E1E746226C90F2005B3B73 /* StarLittleVideoViewController.h */,
 				93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */,
 			);
@@ -425,6 +444,11 @@
 				93E1E76C226CA80C005B3B73 /* LittleVideoTableViewCell.h */,
 				93E1E76D226CA80C005B3B73 /* LittleVideoTableViewCell.m */,
 				93E1E76E226CA80C005B3B73 /* LittleVideoTableViewCell.xib */,
+				93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */,
+				93C8A4D9226F6184000DC9F7 /* MovieDetailView.xib */,
+				93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */,
+				93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */,
+				93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -486,6 +510,7 @@
 				TargetAttributes = {
 					06811F1622672FBE00E857E2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -515,12 +540,14 @@
 				063B21462269AC2E00F3EDFB /* MineTableViewCell1.xib in Resources */,
 				93E1E76B226CA5E7005B3B73 /* StarEightTableViewCell.xib in Resources */,
 				063B214C2269AC2E00F3EDFB /* DataCel1l.xib in Resources */,
+				93C8A4DB226F6184000DC9F7 /* MovieDetailView.xib in Resources */,
 				06811F2722672FC000E857E2 /* LaunchScreen.storyboard in Resources */,
 				06811F2422672FC000E857E2 /* Assets.xcassets in Resources */,
 				93E1E766226C9F97005B3B73 /* StarRangkingCell.xib in Resources */,
 				1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */,
 				06811F2222672FBE00E857E2 /* Main.storyboard in Resources */,
 				063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */,
+				93C8A4E4226F67DA000DC9F7 /* YuwanCardHeaderView.xib in Resources */,
 				93E1E754226C9534005B3B73 /* StarBallCell.xib in Resources */,
 				063B21482269AC2E00F3EDFB /* MineTableViewCell2.xib in Resources */,
 				06811F632267325300E857E2 /* sdRefeshView_arrow@2x.png in Resources */,
@@ -605,11 +632,14 @@
 				93E1E74B226C9292005B3B73 /* DemoViewController.m in Sources */,
 				06811F612267325300E857E2 /* CartViewController.m in Sources */,
 				93E1E765226C9F97005B3B73 /* StarRangkingCell.m in Sources */,
+				93C8A4DF226F6628000DC9F7 /* StarRankingDetailViewController.m in Sources */,
 				06811F692267325300E857E2 /* YLImageView.m in Sources */,
 				06811F682267325300E857E2 /* YLGIFImage.m in Sources */,
 				063B214A2269AC2E00F3EDFB /* EditDataVC.m in Sources */,
 				063B21472269AC2E00F3EDFB /* ChangeNameVC.m in Sources */,
+				93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */,
 				06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */,
+				93C8A4E7226F68CE000DC9F7 /* StarEightDetailViewController.m in Sources */,
 				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
 				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
@@ -624,6 +654,7 @@
 				1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
 				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,
+				93C8A4E3226F67DA000DC9F7 /* YuwanCardHeaderView.swift in Sources */,
 				93E1E76A226CA5E7005B3B73 /* StarEightTableViewCell.m in Sources */,
 				06811F592267325300E857E2 /* YXYTabbarController.m in Sources */,
 				063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */,
@@ -771,8 +802,10 @@
 			baseConfigurationReference = A23B081A4EC4593C81526C36 /* Pods-NewsSpecial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K96S8R47AN;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NewsSpecial/News.pch;
 				INFOPLIST_FILE = NewsSpecial/Info.plist;
@@ -783,6 +816,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GetOn.NewsSpecial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -792,8 +828,10 @@
 			baseConfigurationReference = AFBF95D08F554A66AE18D040 /* Pods-NewsSpecial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K96S8R47AN;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = NewsSpecial/News.pch;
 				INFOPLIST_FILE = NewsSpecial/Info.plist;
@@ -804,6 +842,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = GetOn.NewsSpecial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

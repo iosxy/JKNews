@@ -1,8 +1,8 @@
 //
-//  StarBallDetailViewController.h
+//  StarEightDetailViewController.h
 //  NewsSpecial
 //
-//  Created by 欢瑞世纪 on 2019/4/23.
+//  Created by huhu on 2019/4/23.
 //  Copyright © 2019 GetOn. All rights reserved.
 //
 
@@ -10,11 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StarBallDetailViewController : UIViewController
-
-
-
-
+@interface StarEightDetailViewController : UIViewController
 
 @end
 

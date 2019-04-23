@@ -50,7 +50,7 @@ alpha:(a)]
 #import "UIView+clipCorner.h"
 #import "UICollectionView+demo.h"
 #import "UITableView+demo.h"
-
+#import "NewsSpecial-Swift.h"
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define WHITECOLOR(w) [UIColor colorWithWhite:(w)/255.0 alpha:1]
