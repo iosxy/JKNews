@@ -13,11 +13,13 @@
     
     if ([url containsString:@".webp"]) {
         
-        NSMutableString * newUrl = [[NSMutableString alloc]initWithString:url];
+        NSArray * strArr = [url componentsSeparatedByString:@"!"];
         
-       url =  [newUrl stringByReplacingOccurrencesOfString:@".webp" withString:@""];
         
-       
+        
+        url = [NSString stringWithFormat:@"%@%@",strArr[0],@"!200.nw"];
+        
+        
         
     }
     

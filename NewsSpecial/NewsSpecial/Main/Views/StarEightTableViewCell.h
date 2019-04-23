@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StarEightTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
 
 @end
 

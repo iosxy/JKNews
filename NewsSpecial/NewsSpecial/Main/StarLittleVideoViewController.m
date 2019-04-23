@@ -32,7 +32,7 @@
 }
 
 - (void)YreloadData{
-    _index = 0;
+    _index = 1;
     [YCHNetworking postStartRequestFromUrl:[NSString stringWithFormat:VIDEO_URL,_index] andParamter:@{} returnData:^(NSData *data, NSError *error) {
         
         [self.tableView.header endRefreshing];
