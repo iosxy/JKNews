@@ -51,9 +51,9 @@
     
 }
 #pragma mark - 保存签名
-- (void)rightBtnClicked
-{
-    NSLog(@"保存签名");
+- (void)rightBtnClicked{
+    [UserModel currentUser].sign = _signView.text;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - textDelegate

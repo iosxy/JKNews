@@ -45,7 +45,7 @@ alpha:(a)]
 #import "Masonry.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MJRefresh.h"
-
+#import "UserModel.h"
 #import "UIImageView+setImage.h"
 #import "UIView+clipCorner.h"
 #import "UICollectionView+demo.h"

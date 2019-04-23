@@ -37,7 +37,7 @@
     [super viewWillAppear:animated];
     [self.tabBarController.tabBar setHidden:NO];
     self.navigationController.navigationBarHidden = NO;
-    
+    [self.editDataTV reloadData];
 }
 
 - (void)upload:(EditSignatureVC *)VC Signature:(NSString *)signature{
@@ -48,7 +48,6 @@
     [super viewDidLoad];
     [self addDataSource];
     [self addTableView];
-    [self personInfo];
     NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath = [path objectAtIndex:0];
     //指定新建文件夹路径
@@ -59,21 +58,13 @@
     _imagePath = [imageDocPath stringByAppendingPathComponent:@"image.png"];
 }
 
-- (void)personInfo {
-    
-}
-
-- (void)saveInfomation {
-    
-}
-
 - (void) returnView {
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)addDataSource
 {
-    NSArray * arr1 = @[@{@"title":@"头像",},@{@"title":@"名字"}];
-    NSArray * arr2 = @[@{@"title":@"性别"},@{@"title":@"职业"},@{@"title":@"个性签名"}];
+    NSArray * arr1 = @[@{@"title":@"头像"}];
+    NSArray * arr2 = @[@{@"title":@"名字"},@{@"title":@"性别"},@{@"title":@"个性签名"}];
     [self.listArray addObject:arr1];
     [self.listArray addObject:arr2];
 }
@@ -115,6 +106,20 @@
             _cell1 = [[DataCel1l alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DataCel1l"];
         }
         _cell1.nameLabel.text = self.listArray[indexPath.section][indexPath.row][@"title"];
+        switch (indexPath.row) {
+            case 0:
+                _cell1.detailedLabel.text = [UserModel currentUser].nickName;
+                break;
+            case 1:
+                _cell1.detailedLabel.text = [[UserModel currentUser].gender isEqualToString:@"1"] ? @"男":@"女";
+                break;
+            case 2:
+                _cell1.detailedLabel.text = [UserModel currentUser].sign;
+                break;
+                
+            default:
+                break;
+        }
         return _cell1;
     }
 }
@@ -124,42 +129,28 @@
         if (indexPath.row == 0) {
             //头像
             [self changeImage];
-        }else
-        {
+        }
+    }else
+    {
+        if (indexPath.row == 0) {
+            
             //名字
             ChangeNameVC * changeName = [[ChangeNameVC alloc]init];
             changeName.title = @"名字";
             changeName.name = @"昵称";
             [self.navigationController pushViewController:changeName animated:NO];
             
-        }
-    }else
-    {
-        if (indexPath.row == 0) {
+        }else if(indexPath.row == 1)
+        {
             //性别
             [self changeSex];
-            
-            
-            
-        }else if (indexPath.row == 1)
-        {
-            //职业
-            
-            
-        }else
+        }
+        else
         {
             //个性签名
             [self goEditSignatureVC];
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -183,11 +174,14 @@
     }];
     UIAlertAction *camera = [UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         //用户选择了男
-        NSLog(@"用户选择了男");
+        [UserModel currentUser].gender = @"1";
+         [self.editDataTV reloadData];
     }];
     UIAlertAction *picture = [UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         //用户选择了女
         NSLog(@"用户选择了女");
+        [UserModel currentUser].gender = @"0";
+         [self.editDataTV reloadData];
     }];
     [alertVc addAction:cancle];
     [alertVc addAction:camera];
@@ -199,7 +193,7 @@
 #pragma mark - 个性签名
 - (void)goEditSignatureVC {
     EditSignatureVC *editSingatureVC = [[EditSignatureVC alloc]init];
-    editSingatureVC.signStr = @"我是签名";
+    editSingatureVC.signStr = @"";
     [self.navigationController pushViewController:editSingatureVC animated:NO];
 }
 

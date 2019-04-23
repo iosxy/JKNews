@@ -54,7 +54,8 @@
 #pragma mark - 保存昵称
 - (void)rightBtnClicked
 {
-    NSLog(@"保存昵称");
+    [UserModel currentUser].nickName = _textF.text;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

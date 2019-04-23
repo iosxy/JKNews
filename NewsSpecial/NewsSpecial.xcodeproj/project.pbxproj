@@ -46,6 +46,7 @@
 		06811F682267325300E857E2 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F542267325300E857E2 /* YLGIFImage.m */; };
 		06811F692267325300E857E2 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F552267325300E857E2 /* YLImageView.m */; };
 		06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F582267325300E857E2 /* YCHNetworking.m */; };
+		06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE8831226F1C4A00D7D843 /* UserModel.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E73E226C90C5005B3B73 /* StarBallViewController.m */; };
@@ -141,6 +142,8 @@
 		06811F572267325300E857E2 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
 		06811F582267325300E857E2 /* YCHNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHNetworking.m; sourceTree = "<group>"; };
 		06811F982267329A00E857E2 /* News.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.pch; sourceTree = "<group>"; };
+		06FE8830226F1C4A00D7D843 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		06FE8831226F1C4A00D7D843 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93E1E73D226C90C5005B3B73 /* StarBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallViewController.h; sourceTree = "<group>"; };
@@ -216,24 +219,26 @@
 		063B212C2269AC2E00F3EDFB /* personInformation */ = {
 			isa = PBXGroup;
 			children = (
-				063B212D2269AC2E00F3EDFB /* DataCel1l.m */,
 				063B212E2269AC2E00F3EDFB /* UploadHeaderCell.h */,
-				063B212F2269AC2E00F3EDFB /* EditDataVC.h */,
-				063B21302269AC2E00F3EDFB /* EditSignatureVC.m */,
-				063B21312269AC2E00F3EDFB /* MineTableViewCell2.m */,
-				063B21322269AC2E00F3EDFB /* MineTableViewCell1.xib */,
-				063B21332269AC2E00F3EDFB /* ChangeNameVC.m */,
-				063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */,
-				063B21352269AC2E00F3EDFB /* MineTableViewCell1.m */,
-				063B21362269AC2E00F3EDFB /* EditDataVC.m */,
 				063B21372269AC2E00F3EDFB /* UploadHeaderCell.m */,
-				063B21382269AC2E00F3EDFB /* DataCel1l.h */,
-				063B21392269AC2E00F3EDFB /* DataCel1l.xib */,
 				063B213A2269AC2E00F3EDFB /* UploadHeaderCell.xib */,
-				063B213B2269AC2E00F3EDFB /* MineTableViewCell2.h */,
-				063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */,
+				063B212F2269AC2E00F3EDFB /* EditDataVC.h */,
+				063B21362269AC2E00F3EDFB /* EditDataVC.m */,
 				063B213D2269AC2E00F3EDFB /* ChangeNameVC.h */,
+				063B21332269AC2E00F3EDFB /* ChangeNameVC.m */,
+				063B21382269AC2E00F3EDFB /* DataCel1l.h */,
+				063B212D2269AC2E00F3EDFB /* DataCel1l.m */,
+				063B21392269AC2E00F3EDFB /* DataCel1l.xib */,
+				063B213C2269AC2E00F3EDFB /* EditSignatureVC.h */,
+				063B21302269AC2E00F3EDFB /* EditSignatureVC.m */,
 				063B213E2269AC2E00F3EDFB /* MineTableViewCell1.h */,
+				063B21352269AC2E00F3EDFB /* MineTableViewCell1.m */,
+				063B21322269AC2E00F3EDFB /* MineTableViewCell1.xib */,
+				063B213B2269AC2E00F3EDFB /* MineTableViewCell2.h */,
+				063B21312269AC2E00F3EDFB /* MineTableViewCell2.m */,
+				063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */,
+				06FE8830226F1C4A00D7D843 /* UserModel.h */,
+				06FE8831226F1C4A00D7D843 /* UserModel.m */,
 			);
 			path = personInformation;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				06811F682267325300E857E2 /* YLGIFImage.m in Sources */,
 				063B214A2269AC2E00F3EDFB /* EditDataVC.m in Sources */,
 				063B21472269AC2E00F3EDFB /* ChangeNameVC.m in Sources */,
+				06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */,
 				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
 				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
