@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    
+    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - SafeAreaTopHeight - 100);
     [self.tableView registerNib:[UINib nibWithNibName:@"StarRangkingCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     
     self.tableView.rowHeight = 120;
@@ -28,7 +28,7 @@
 
 - (void)YreloadData{
     _pageNo = 1;
-    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @"" , } returnData:^(NSData *data, NSError *error) {
+    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @""} returnData:^(NSData *data, NSError *error) {
       
         if (!error){
             NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
@@ -44,14 +44,14 @@
 }
 - (void)YloadMoreData{
     _pageNo += 1;
-    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @"" , } returnData:^(NSData *data, NSError *error) {
-        [self.tableView.footer endRefreshing];
+    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @""} returnData:^(NSData *data, NSError *error) {
         if (!error){
             NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
             
-            [self.dataList addObjectsFromArray:dic[@"data"][@"list"][@"list"]];
+            [self.dataList addObjectsFromArray:dic[@"data"][@"rankingList"][@"list"]];
             [self.tableView reloadData];
         }
+        [self.tableView.footer endRefreshing];
         
     }];
 }
@@ -65,7 +65,6 @@
     cell.doctor.text = [NSString stringWithFormat:@"%@%@",@"主演: ",dic[@"directors"]];
     cell.rank.text =  [NSString stringWithFormat:@"%@",dic[@"rank"]]  ;
     cell.hotFire.text = [NSString stringWithFormat:@"🔥 %@",dic[@"realRankingListNumber"]];
-    
     
     return cell;
     
