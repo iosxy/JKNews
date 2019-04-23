@@ -14,6 +14,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.rank.layer.masksToBounds = YES;
+    self.rank.layer.cornerRadius = 25.0 / 2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

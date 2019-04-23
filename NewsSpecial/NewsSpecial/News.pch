@@ -56,6 +56,7 @@ alpha:(a)]
 #define WHITECOLOR(w) [UIColor colorWithWhite:(w)/255.0 alpha:1]
 
 #define MainColor  RGB(0xA788D8)//淡紫色
+#define PrinkColor  RGB(0xCBB4DC)//更淡紫色
 
 
 #endif /* News_pch */

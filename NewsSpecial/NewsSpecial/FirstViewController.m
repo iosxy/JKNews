@@ -52,15 +52,14 @@
         CGRect pagerRect = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         _ninaPagerView = [[NinaPagerView alloc] initWithFrame:pagerRect WithTitles:titleArray WithVCs:vcsArray];
         _ninaPagerView.ninaPagerStyles = NinaPagerStyleSlideBlock;
-        _ninaPagerView.sliderBlockColor = [UIColor yellowColor];
+        _ninaPagerView.sliderBlockColor = PrinkColor;
         _ninaPagerView.sliderHeight = 33;
-        
         _ninaPagerView.slideBlockCornerRadius = 2;
         _ninaPagerView.delegate = self;
-        _ninaPagerView.selectTitleColor = [UIColor redColor];
+        _ninaPagerView.selectTitleColor = [UIColor whiteColor];
         _ninaPagerView.unSelectTitleColor = [UIColor lightGrayColor];
         
-        _ninaPagerView.titleFont = 13;
+        _ninaPagerView.titleFont = 14;
         _ninaPagerView.titleScale = 1.0;
         _ninaPagerView.underLineHidden = YES;
         _ninaPagerView.delegate = self;

@@ -62,6 +62,7 @@
     NSDictionary * dic = self.dataList[indexPath.row];
     cell.title.text = dic[@"title"];
     [cell.cover ysd_setImageWithString:dic[@"cover"]];
+    cell.cover.contentMode = UIViewContentModeScaleAspectFill;
     cell.doctor.text = [NSString stringWithFormat:@"%@%@",@"主演: ",dic[@"directors"]];
     cell.rank.text =  [NSString stringWithFormat:@"%@",dic[@"rank"]]  ;
     cell.hotFire.text = [NSString stringWithFormat:@"🔥 %@",dic[@"realRankingListNumber"]];
