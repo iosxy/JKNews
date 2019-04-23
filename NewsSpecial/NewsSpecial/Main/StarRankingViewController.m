@@ -44,16 +44,17 @@
 }
 - (void)YloadMoreData{
     _pageNo += 1;
-    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @"" , } returnData:^(NSData *data, NSError *error) {
-        [self.tableView.footer endRefreshing];
-        if (!error){
-            NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
-            
-            [self.dataList addObjectsFromArray:dic[@"data"][@"list"][@"list"]];
-            [self.tableView reloadData];
-        }
-        
-    }];
+    [self.tableView.footer endRefreshing];
+//    [YCHNetworking postStartRequestFromUrl:@"http://ywapp.hryouxi.com/yuwanapi/app/getNewRankingList" andParamter:@{@"pageNo":@(_pageNo),@"pageSize" : @"20" , @"type" : @"OPUS" , @"orderType":@"3",@"userId" : @"" , } returnData:^(NSData *data, NSError *error) {
+//        [self.tableView.footer endRefreshing];
+//        if (!error){
+//            NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:data options:1 error:nil];
+//
+//            [self.dataList addObjectsFromArray:dic[@"data"][@"list"][@"list"]];
+//            [self.tableView reloadData];
+//        }
+//
+//    }];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

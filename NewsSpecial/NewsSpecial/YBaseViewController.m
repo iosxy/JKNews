@@ -24,13 +24,18 @@
 }
 - (void)createTableView {
     self.dataList = [NSMutableArray new];
-    self.tableView  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.tableView  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(YreloadData)];
     self.tableView.footer = [MJRefreshAutoGifFooter footerWithRefreshingTarget:self refreshingAction:@selector(YloadMoreData)];
     [self.view addSubview:_tableView];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(self.view);
+        make.bottom.mas_equalTo(self.view).offset(-64);
+    }];
 }
 
 - (void)YreloadData{
