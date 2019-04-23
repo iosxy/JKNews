@@ -13,6 +13,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.contentImageView.layer.masksToBounds = YES;
+    self.contentImageView.layer.cornerRadius = 4.0;
 }
+
 
 @end

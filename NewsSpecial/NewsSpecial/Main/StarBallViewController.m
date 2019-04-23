@@ -31,7 +31,7 @@
     
     layoout.minimumLineSpacing = 0;
     layoout.minimumInteritemSpacing = 10;
-    layoout.itemSize = CGSizeMake(SCREEN_WIDTH/2 - 15, SCREEN_WIDTH/2 - 15);
+    layoout.itemSize = CGSizeMake(SCREEN_WIDTH/2 - 15, SCREEN_WIDTH/2 - 15 + 20 + 14);
     
     _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layoout];
     _collectionView.dataSource = self;
@@ -76,7 +76,6 @@
     }];
     
 }
-
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
