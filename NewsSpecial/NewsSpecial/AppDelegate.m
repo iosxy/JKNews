@@ -43,8 +43,10 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:193 / 255.0 green:193 / 255.0 blue:193 / 255.0 alpha:1], NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
     UIColor *titleHighlightedColor = MainColor;
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:titleHighlightedColor, NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    UserModel * user = [UserModel new];
+    user.nickName = @"默认用户";
     
-    
+    [UserModel setCurrentUser:user];
     
     return YES;
 }

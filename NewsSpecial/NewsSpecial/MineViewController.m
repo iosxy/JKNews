@@ -26,7 +26,10 @@
     EditDataVC *_editDataVC;
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,10 +47,11 @@
     [self.listArray addObject:arr2];
 }
 - (void)addTableView {
-//    self.tableView.style = UITableViewStyleGrouped;
     [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell2" bundle:nil] forCellReuseIdentifier:@"MineTableViewCell2"];
     [self.tableView registerNib:[UINib nibWithNibName:@"MineTableViewCell1" bundle:nil] forCellReuseIdentifier:@"MineTableViewCell1"];
     [self.view addSubview:self.tableView];
+    [self.tableView.header removeFromSuperview];
+    [self.tableView.footer removeFromSuperview];
     
 }
 
@@ -63,9 +67,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 100;
+        return 130;
     }else {
-        return 44;
+        return 55;
     }
 }
 
@@ -74,6 +78,10 @@
     if (indexPath.section == 0) {
         MineTableViewCell2 * cell = [tableView dequeueReusableCellWithIdentifier:@"MineTableViewCell2" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.nickName.text = [UserModel currentUser].nickName;
+        cell.genderLabel.text = [[UserModel currentUser].gender isEqualToString:@"1"] ? @"男":@"女";
+        cell.signLabel.text = [UserModel currentUser].sign.length?[UserModel currentUser].sign:@"写个签名吧~";
+        cell.idLabel.text = @"1111111";
         return cell;
     }else
     {
