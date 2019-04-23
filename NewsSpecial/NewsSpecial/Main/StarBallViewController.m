@@ -8,6 +8,7 @@
 
 #import "StarBallViewController.h"
 #import "StarBallCell.h"
+#import "StarBallDetailViewController.h"
 @interface StarBallViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
 @property (nonatomic ,strong) UICollectionView * collectionView;
@@ -91,5 +92,14 @@
     return  self.dataList.count;
 }
 
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [collectionView deselectItemAtIndexPath:indexPath animated:true];
+    
+    StarBallDetailViewController * vc = [[StarBallDetailViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:true];
+    
+    
+}
 @end

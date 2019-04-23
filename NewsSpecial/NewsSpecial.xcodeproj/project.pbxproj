@@ -46,6 +46,8 @@
 		06811F682267325300E857E2 /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F542267325300E857E2 /* YLGIFImage.m */; };
 		06811F692267325300E857E2 /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F552267325300E857E2 /* YLImageView.m */; };
 		06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 06811F582267325300E857E2 /* YCHNetworking.m */; };
+		1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */; };
+		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E73E226C90C5005B3B73 /* StarBallViewController.m */; };
@@ -141,6 +143,9 @@
 		06811F572267325300E857E2 /* YLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLImageView.h; sourceTree = "<group>"; };
 		06811F582267325300E857E2 /* YCHNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHNetworking.m; sourceTree = "<group>"; };
 		06811F982267329A00E857E2 /* News.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = News.pch; sourceTree = "<group>"; };
+		1F12BCAA226F159E00071E38 /* StarBallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallDetailViewController.h; sourceTree = "<group>"; };
+		1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallDetailViewController.m; sourceTree = "<group>"; };
+		1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarBallDetailViewController.xib; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93E1E73D226C90C5005B3B73 /* StarBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallViewController.h; sourceTree = "<group>"; };
@@ -387,6 +392,9 @@
 				93E1E74C226C9509005B3B73 /* Views */,
 				93E1E73D226C90C5005B3B73 /* StarBallViewController.h */,
 				93E1E73E226C90C5005B3B73 /* StarBallViewController.m */,
+				1F12BCAA226F159E00071E38 /* StarBallDetailViewController.h */,
+				1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */,
+				1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */,
 				93E1E740226C90DE005B3B73 /* StarRankingViewController.h */,
 				93E1E741226C90DE005B3B73 /* StarRankingViewController.m */,
 				93E1E743226C90E9005B3B73 /* StarEightViewController.h */,
@@ -505,6 +513,7 @@
 				06811F2722672FC000E857E2 /* LaunchScreen.storyboard in Resources */,
 				06811F2422672FC000E857E2 /* Assets.xcassets in Resources */,
 				93E1E766226C9F97005B3B73 /* StarRangkingCell.xib in Resources */,
+				1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */,
 				06811F2222672FBE00E857E2 /* Main.storyboard in Resources */,
 				063B214D2269AC2E00F3EDFB /* UploadHeaderCell.xib in Resources */,
 				93E1E754226C9534005B3B73 /* StarBallCell.xib in Resources */,
@@ -606,6 +615,7 @@
 				06811F662267325300E857E2 /* SDRefreshView.m in Sources */,
 				063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */,
 				93E1E758226C9830005B3B73 /* UIImageView+setImage.m in Sources */,
+				1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
 				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,
 				93E1E76A226CA5E7005B3B73 /* StarEightTableViewCell.m in Sources */,
