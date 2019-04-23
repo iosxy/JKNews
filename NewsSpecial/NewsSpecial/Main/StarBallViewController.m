@@ -66,8 +66,7 @@
                 [self.dataList removeAllObjects];
                 
             }
-            [self.tableView.header endRefreshing];
-            [self.tableView.footer endRefreshing];
+            
             
             [self.dataList addObjectsFromArray:dic[@"data"][@"list"][@"list"]];
             [self.collectionView reloadData];
@@ -91,8 +90,6 @@
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return  self.dataList.count;
 }
-
-
 
 
 @end
