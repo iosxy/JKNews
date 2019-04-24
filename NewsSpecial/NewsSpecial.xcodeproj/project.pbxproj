@@ -49,6 +49,8 @@
 		06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE8831226F1C4A00D7D843 /* UserModel.m */; };
 		1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */; };
 		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
+		1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */; };
+		1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCBC2270070000071E38 /* NewsTableViewCell.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
@@ -56,7 +58,6 @@
 		93C8A4DF226F6628000DC9F7 /* StarRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */; };
 		93C8A4E3226F67DA000DC9F7 /* YuwanCardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */; };
 		93C8A4E4226F67DA000DC9F7 /* YuwanCardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */; };
-		93C8A4E7226F68CE000DC9F7 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */; };
 		93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E73E226C90C5005B3B73 /* StarBallViewController.m */; };
 		93E1E742226C90DE005B3B73 /* StarRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E741226C90DE005B3B73 /* StarRankingViewController.m */; };
 		93E1E745226C90E9005B3B73 /* StarEightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E1E744226C90E9005B3B73 /* StarEightViewController.m */; };
@@ -155,6 +156,10 @@
 		1F12BCAA226F159E00071E38 /* StarBallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallDetailViewController.h; sourceTree = "<group>"; };
 		1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallDetailViewController.m; sourceTree = "<group>"; };
 		1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarBallDetailViewController.xib; sourceTree = "<group>"; };
+		1F12BCB82270069A00071E38 /* StarEightDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarEightDetailViewController.h; sourceTree = "<group>"; };
+		1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightDetailViewController.m; sourceTree = "<group>"; };
+		1F12BCBB2270070000071E38 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		1F12BCBC2270070000071E38 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -164,8 +169,6 @@
 		93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRankingDetailViewController.m; sourceTree = "<group>"; };
 		93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YuwanCardHeaderView.swift; sourceTree = "<group>"; };
 		93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YuwanCardHeaderView.xib; sourceTree = "<group>"; };
-		93C8A4E5226F68CE000DC9F7 /* StarEightDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarEightDetailViewController.h; sourceTree = "<group>"; };
-		93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightDetailViewController.m; sourceTree = "<group>"; };
 		93E1E73D226C90C5005B3B73 /* StarBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallViewController.h; sourceTree = "<group>"; };
 		93E1E73E226C90C5005B3B73 /* StarBallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarBallViewController.m; sourceTree = "<group>"; };
 		93E1E740226C90DE005B3B73 /* StarRankingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarRankingViewController.h; sourceTree = "<group>"; };
@@ -421,8 +424,8 @@
 				93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */,
 				93E1E743226C90E9005B3B73 /* StarEightViewController.h */,
 				93E1E744226C90E9005B3B73 /* StarEightViewController.m */,
-				93C8A4E5226F68CE000DC9F7 /* StarEightDetailViewController.h */,
-				93C8A4E6226F68CE000DC9F7 /* StarEightDetailViewController.m */,
+				1F12BCB82270069A00071E38 /* StarEightDetailViewController.h */,
+				1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */,
 				93E1E746226C90F2005B3B73 /* StarLittleVideoViewController.h */,
 				93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */,
 			);
@@ -449,6 +452,8 @@
 				93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */,
 				93C8A4E1226F67D9000DC9F7 /* YuwanCardHeaderView.swift */,
 				93C8A4E2226F67DA000DC9F7 /* YuwanCardHeaderView.xib */,
+				1F12BCBB2270070000071E38 /* NewsTableViewCell.h */,
+				1F12BCBC2270070000071E38 /* NewsTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -621,6 +626,7 @@
 				063B21402269AC2E00F3EDFB /* UIView+ViewController.m in Sources */,
 				93E1E75E226C9860005B3B73 /* UICollectionView+demo.m in Sources */,
 				06811F5F2267325300E857E2 /* ClassViewController.m in Sources */,
+				1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */,
 				93E1E75B226C9841005B3B73 /* UIView+clipCorner.m in Sources */,
 				063B21452269AC2E00F3EDFB /* MineTableViewCell2.m in Sources */,
 				93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */,
@@ -639,7 +645,7 @@
 				063B21472269AC2E00F3EDFB /* ChangeNameVC.m in Sources */,
 				93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */,
 				06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */,
-				93C8A4E7226F68CE000DC9F7 /* StarEightDetailViewController.m in Sources */,
+				1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */,
 				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
 				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
@@ -818,7 +824,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -843,7 +849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GetOn.NewsSpecial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

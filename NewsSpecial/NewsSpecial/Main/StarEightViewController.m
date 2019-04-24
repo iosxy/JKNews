@@ -8,7 +8,7 @@
 
 #import "StarEightViewController.h"
 #import "StarEightTableViewCell.h"
-
+#import "StarEightDetailViewController.h"
 #define  ARTICLE_LIST @"http://api.app.happyjuzi.com/article/list/home?accesstoken=5fc865056742c82430db621de55b1320&brand=Apple&carrier=2&id=0&idfa=AD40CFA7-85B0-4ECB-A823-313C5F85C325&model=iPhone7Plus&net=wifi&page=%d&pf=ios&res=414x736&size=20&system=12.1.4&uid=4363595144352692&ver=4.1"
 
 @interface StarEightViewController ()
@@ -86,7 +86,17 @@
     
     return cell;
     
+    
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    StarEightDetailViewController * vc = [[StarEightDetailViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:vc animated:true];
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return  self.dataList.count;
