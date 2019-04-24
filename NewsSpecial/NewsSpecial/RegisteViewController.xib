@@ -39,7 +39,7 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-gM-HSN">
                     <rect key="frame" x="40" y="300" width="295" height="40"/>
-                    <color key="backgroundColor" red="0.61284722222222221" green="0.24524390124758347" blue="0.42127441726146042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.49803921568627452" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="kaj-L2-jCS"/>
                     </constraints>
