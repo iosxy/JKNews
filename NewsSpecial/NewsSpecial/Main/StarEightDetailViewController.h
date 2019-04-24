@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface StarEightDetailViewController : YBaseViewController
 
+@property(nonatomic,assign) NSNumber * contentId;
+
 @end
 
 NS_ASSUME_NONNULL_END

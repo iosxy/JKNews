@@ -93,6 +93,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     StarEightDetailViewController * vc = [[StarEightDetailViewController alloc]init];
     vc.hidesBottomBarWhenPushed = true;
+    vc.contentId = self.dataList[indexPath.row][@"id"];
     [self.navigationController pushViewController:vc animated:true];
     
 }

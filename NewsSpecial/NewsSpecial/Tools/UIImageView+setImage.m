@@ -15,11 +15,7 @@
         
         NSArray * strArr = [url componentsSeparatedByString:@"!"];
         
-        
-        
         url = [NSString stringWithFormat:@"%@%@",strArr[0],@"!200.nw"];
-        
-        
         
     }
     
@@ -30,7 +26,6 @@
         
     }
     
-    [self sd_cancelCurrentImageLoad];
     [self sd_setImageWithURL:[NSURL URLWithString:url]];
     
 }

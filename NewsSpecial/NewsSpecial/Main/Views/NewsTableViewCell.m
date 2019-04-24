@@ -26,6 +26,7 @@
         _title = [UILabel new];
         _title.text = @"标题";
         _title.numberOfLines = 0;
+        _title.textAlignment = NSTextAlignmentCenter;
         _time = [UILabel new];
         _time.text = @"时间";
         _time.font = [UIFont systemFontOfSize:12];
@@ -40,14 +41,14 @@
         [self.contentView addSubview:_time];
         [self.contentView addSubview:_from];
         
-        [_time mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_title mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(12));
             make.right.equalTo(self.contentView).offset(-12);
-            
+            make.top.equalTo(@(12));
         }];
         
         [_time mas_makeConstraints:^(MASConstraintMaker *make) {
-           make.right.equalTo(self.contentView).offset(-12);
+            make.right.equalTo(self.contentView).offset(-12);
             make.bottom.equalTo(self.contentView).offset(-12);
         }];
         [_from mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,7 +60,10 @@
  
     return self;
 }
-
+- (void)loadData:(NSDictionary *)item {
+    _title.text = item[@"title"];
+    _time.text = item[@"publish_time"];
+}
 @end
 @implementation NewsTextTableViewCell{
     
@@ -67,9 +71,10 @@
     
 }
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
     
-    if (self =  [super initWithFrame:frame]) {
+    if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         
         _content = [UILabel new];
@@ -80,6 +85,7 @@
         [_content mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(@(12));
             make.right.equalTo(self.contentView).offset(-12);
+            make.top.equalTo(@(6));
             make.bottom.lessThanOrEqualTo(self.contentView);
         }];
         
@@ -88,28 +94,52 @@
     
     return self;
 }
-
+- (void)loadData:(NSString *)item
+{
+    if ([item containsString:@"IMG"]) {
+        item = @"";
+    }
+    if ([item containsString:@"<p>"]) {
+        NSMutableString * newItem = [[NSMutableString alloc]initWithString:item];
+        
+        item = [newItem stringByReplacingOccurrencesOfString:@"<p>" withString:@""];
+    }
+    if ([item containsString:@"</p>"]) {
+        NSMutableString * newItem = [[NSMutableString alloc]initWithString:item];
+        
+        item = [newItem stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+    }
+    if ([item containsString:@"<p style=\"text-align: center;\">"]) {
+        NSMutableString * newItem = [[NSMutableString alloc]initWithString:item];
+        
+        item = [newItem stringByReplacingOccurrencesOfString:@"<p style=\"text-align: center;\">" withString:@""];
+    }
+    _content.text = item;
+    
+}
 @end
 
 @implementation NewsImageTableViewCell{
     
     UIImageView * _contentImaageView;
 }
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self =  [super initWithFrame:frame]) {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    
+    if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         _contentImaageView = [UIImageView new];
-        _contentImaageView.image = [UIImage imageNamed:@"娱乐1"];
-        _contentImaageView.contentMode = UIViewContentModeCenter;
+        _contentImaageView.image = [UIImage imageNamed:@"logo"];
+        _contentImaageView.contentMode = UIViewContentModeScaleAspectFit;
         
         [self.contentView addSubview:_contentImaageView];
         [_contentImaageView mas_makeConstraints:^(MASConstraintMaker *make) {
            
-            make.edges.equalTo(self.contentView).offset(-12);
+            make.left.equalTo(@(12));
+            make.top.equalTo(@(6));
+            make.right.bottom.equalTo(self.contentView).offset(-6);
             
         }];
-        
         
     }
     
@@ -117,6 +147,8 @@
     return self;
     
 }
-
+- (void)loadData:(NSDictionary *)item {
+    [_contentImaageView ysd_setImageWithString:item[@"src"]];
+}
 @end
 
