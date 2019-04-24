@@ -15,6 +15,8 @@
     // Initialization code
     self.headerImageView.layer.masksToBounds = YES;
     self.headerImageView.layer.cornerRadius = 50.0;
+    self.headerImageView.layer.borderWidth = 3.0;
+    self.headerImageView.layer.borderColor = MainColor.CGColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

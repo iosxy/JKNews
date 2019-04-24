@@ -10,5 +10,5 @@
 #import "YBaseViewController.h"
 
 @interface MineViewController : YBaseViewController
-
+@property(nonatomic,assign)BOOL isLogin;
 @end

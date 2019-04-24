@@ -11,6 +11,7 @@
 #import "MineTableViewCell2.h"
 #import "EditDataVC.h"
 #import "chargeVC.h"
+#import "LoginViewController.h"
 
 
 #define SCREEN_SIZE [[UIScreen mainScreen] bounds].size
@@ -25,9 +26,16 @@
     UITableView *_mineTableView;
     EditDataVC *_editDataVC;
 }
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+    if ([[user objectForKey:@"isLogin"]isEqualToString:@"isLogin"]) {
+        _isLogin = YES;
+    }else{
+        _isLogin = NO;
+    }
+    NSDictionary*dic=[[UserModel currentUser] keyValues];
+    [user setObject:dic forKey:@"currentUser"];
     [self.tableView reloadData];
 }
 - (void)viewDidLoad {
@@ -67,7 +75,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 130;
+        return 160;
     }else {
         return 55;
     }
@@ -78,10 +86,25 @@
     if (indexPath.section == 0) {
         MineTableViewCell2 * cell = [tableView dequeueReusableCellWithIdentifier:@"MineTableViewCell2" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.nickName.text = [UserModel currentUser].nickName;
-        cell.genderLabel.text = [[UserModel currentUser].gender isEqualToString:@"1"] ? @"男":@"女";
-        cell.signLabel.text = [UserModel currentUser].sign.length?[UserModel currentUser].sign:@"写个签名吧~";
-        cell.idLabel.text = @"1111111";
+        if (_isLogin) {
+            UserModel * user = [UserModel currentUser];
+            cell.nickName.text = user.nickName;
+            if (user.gender.length) {
+                cell.genderLabel.text = [user.gender isEqualToString:@"1"] ? @"男":@"女";
+            }else {
+                cell.genderLabel.text = @"未知";
+            }
+            cell.signLabel.text = user.sign.length?user.sign:@"写个签名吧~";
+            cell.idLabel.text = @"87542u56";
+            if (user.userLogo.length) {
+                cell.headerImageView.image = [[UIImage alloc]initWithContentsOfFile:user.userLogo];
+            }
+        }else {
+            cell.nickName.text = @"请登录";
+            cell.signLabel.text = @"签名未知";
+            cell.genderLabel.text = @"未知";
+            cell.idLabel.text = @"id未知";
+        }
         return cell;
     }else
     {
@@ -102,10 +125,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         //个人信息
-        _editDataVC = [[EditDataVC alloc]init];
-        _editDataVC.title = @"个人信息";
-        _editDataVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:_editDataVC animated:YES];
+        if (_isLogin) {
+            _editDataVC = [[EditDataVC alloc]init];
+            _editDataVC.title = @"个人信息";
+            _editDataVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:_editDataVC animated:YES];
+        }else {
+            LoginViewController * vc = [[LoginViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        
         
     }else if (indexPath.section == 1 && indexPath.row == 0)
     {

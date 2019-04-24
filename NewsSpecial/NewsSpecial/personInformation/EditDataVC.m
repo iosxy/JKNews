@@ -97,6 +97,9 @@
         if (_cell0 == nil) {
             _cell0 = [[UploadHeaderCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UploadHeaderCell"];
         }
+        if ([UserModel currentUser].userLogo) {
+            _cell0.headerView1.image = [[UIImage alloc]initWithContentsOfFile:[UserModel currentUser].userLogo];
+        }
         return _cell0;
     }else
     {
@@ -111,7 +114,11 @@
                 _cell1.detailedLabel.text = [UserModel currentUser].nickName;
                 break;
             case 1:
-                _cell1.detailedLabel.text = [[UserModel currentUser].gender isEqualToString:@"1"] ? @"男":@"女";
+                if ([UserModel currentUser].gender.length) {
+                    _cell1.detailedLabel.text = [[UserModel currentUser].gender isEqualToString:@"1"] ? @"男":@"女";
+                }else {
+                    _cell1.detailedLabel.text = @"未知";
+                }
                 break;
             case 2:
                 _cell1.detailedLabel.text = [UserModel currentUser].sign;
@@ -258,18 +265,12 @@
        // image = [image imageScaledInterceptToSize:CGSizeMake(100, 100)];
         
         _picData = UIImagePNGRepresentation(image);
-        
-        //判断图片是不是png格式的文件
-        //        if (UIImagePNGRepresentation(image)) {
-        //            //返回为png图像。
-        //            _picData = UIImagePNGRepresentation(image);
-        //        }else {
-        //            //返回为JPEG图像。
-        //            _picData = UIImageJPEGRepresentation(image, 1.0);
-        //        }
+
         //保存
-        [[NSFileManager defaultManager] createFileAtPath:_imagePath contents:_picData attributes:nil];
-        //        NSLog(@"%@",_imagePath);
+       BOOL issuccess  = [[NSFileManager defaultManager] createFileAtPath:_imagePath contents:_picData attributes:nil];
+        if (issuccess) {
+            [UserModel currentUser].userLogo = _imagePath;
+        }
     }
     //
     [picker dismissViewControllerAnimated:YES completion:^{
