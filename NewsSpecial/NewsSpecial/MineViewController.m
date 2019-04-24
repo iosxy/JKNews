@@ -37,6 +37,7 @@
     }
     NSDictionary*dic=[[UserModel currentUser] keyValues];
     [user setObject:dic forKey:@"currentUser"];
+    _sizeStr = [NSString stringWithFormat:@"%0.2fM",[self folderSizeAtPath:[NSString stringWithFormat:@"%@/Library/Caches/default",NSHomeDirectory()]]];
     [self.tableView reloadData];
 }
 - (void)viewDidLoad {
@@ -44,7 +45,6 @@
     // Do any additional setup after loading the view.
     [self addDataSource];
     [self addTableView];
-    
 }
 - (void)addDataSource
 {
@@ -113,9 +113,10 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.name.text = self.listArray[indexPath.section][indexPath.row][@"title"];
         cell.leftImage.image = [UIImage imageNamed:self.listArray[indexPath.section][indexPath.row][@"image"]];
-
-        if (indexPath.section == 2 && indexPath.row == 1) {
-            cell.rightLabel.hidden = YES;
+        cell.rightLabel.hidden = YES;
+        if (indexPath.section == 1 && indexPath.row == 1) {
+            cell.rightLabel.hidden = NO;
+            cell.rightLabel.text = [NSString stringWithFormat:@"%@",_sizeStr];
         }
         return cell;
     }
@@ -159,10 +160,12 @@
         
     }else {
        //退出登录
-        MainDetailVC * vc = [[MainDetailVC alloc]init];
-        vc.name = @"退出登录";
-        [self.navigationController pushViewController:vc animated:NO];
-        
+        NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+        [self.view showLoadingMeg:@"退出成功!" time:1];
+        [user setObject:@"noLogin" forKey:@"isLogin"];
+        [user removeObjectForKey:@"currentUser"];
+        _isLogin = NO;
+        [self.tableView reloadData];
     }
     
 }
@@ -172,6 +175,7 @@
     [[SDImageCache sharedImageCache]clearDisk];
     [self.view showLoadingMeg:@"清空缓存成功" time:1];
     _sizeStr = [NSString stringWithFormat:@"%0.2fM",[self folderSizeAtPath:[NSString stringWithFormat:@"%@/Library/Caches/default",NSHomeDirectory()]]];
+    [self.tableView reloadData];
 }
 - (float ) folderSizeAtPath:(NSString*) folderPath{
     NSFileManager* manager = [NSFileManager defaultManager];

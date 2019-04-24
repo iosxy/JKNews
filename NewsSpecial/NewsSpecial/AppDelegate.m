@@ -54,6 +54,8 @@
         user.nickName = @"默认用户";
         [UserModel setCurrentUser:user];
     }
+    [userDefaults setObject:@"123" forKey:@"123"];
+    
     return YES;
 }
 
