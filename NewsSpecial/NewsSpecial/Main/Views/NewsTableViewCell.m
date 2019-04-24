@@ -64,6 +64,9 @@
     _title.text = item[@"title"];
     _time.text = item[@"publish_time"];
 }
+- (void)loadNewData:(NSDictionary *)item{
+    
+}
 @end
 @implementation NewsTextTableViewCell{
     
@@ -79,7 +82,7 @@
         
         _content = [UILabel new];
         _content.font = [UIFont systemFontOfSize:14];
-        _content.text = @"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容";
+        _content.text = @"";
         _content.numberOfLines = 0;
         [self.contentView addSubview:_content];
         [_content mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -117,6 +120,9 @@
     _content.text = item;
     
 }
+- (void)loadNewData:(NSDictionary *)item{
+    _content.text = item[@"text"];
+}
 @end
 
 @implementation NewsImageTableViewCell{
@@ -138,7 +144,7 @@
             make.left.equalTo(@(12));
             make.top.equalTo(@(6));
             make.right.bottom.equalTo(self.contentView).offset(-6);
-            
+            make.height.mas_lessThanOrEqualTo(300);
         }];
         
     }
@@ -149,6 +155,10 @@
 }
 - (void)loadData:(NSDictionary *)item {
     [_contentImaageView ysd_setImageWithString:item[@"src"]];
+}
+- (void)loadNewData:(NSDictionary *)item{
+    [_contentImaageView ysd_setImageWithString:item[@"image"][@"url"]];
+    
 }
 @end
 

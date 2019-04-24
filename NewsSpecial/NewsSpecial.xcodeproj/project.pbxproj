@@ -51,6 +51,7 @@
 		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
 		1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */; };
 		1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCBC2270070000071E38 /* NewsTableViewCell.m */; };
+		1F12BCC12270513100071E38 /* StarNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCC02270513100071E38 /* StarNewsDetailViewController.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
@@ -160,6 +161,8 @@
 		1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightDetailViewController.m; sourceTree = "<group>"; };
 		1F12BCBB2270070000071E38 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		1F12BCBC2270070000071E38 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		1F12BCBF2270513100071E38 /* StarNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarNewsDetailViewController.h; sourceTree = "<group>"; };
+		1F12BCC02270513100071E38 /* StarNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarNewsDetailViewController.m; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -330,6 +333,7 @@
 				063B21562269CFA500F3EDFB /* Cart */,
 				06811F982267329A00E857E2 /* News.pch */,
 				063B214E2269B52800F3EDFB /* Class */,
+				1F12BCBE2270510F00071E38 /* StarNews */,
 				063B21242269AC2D00F3EDFB /* NinaPagerView */,
 				063B212C2269AC2E00F3EDFB /* personInformation */,
 				063B21212269AC2D00F3EDFB /* recharge */,
@@ -399,6 +403,15 @@
 				06811F572267325300E857E2 /* YLImageView.h */,
 			);
 			path = YLGIFImage;
+			sourceTree = "<group>";
+		};
+		1F12BCBE2270510F00071E38 /* StarNews */ = {
+			isa = PBXGroup;
+			children = (
+				1F12BCBF2270513100071E38 /* StarNewsDetailViewController.h */,
+				1F12BCC02270513100071E38 /* StarNewsDetailViewController.m */,
+			);
+			path = StarNews;
 			sourceTree = "<group>";
 		};
 		3088970076661D2330C5335F /* Frameworks */ = {
@@ -665,6 +678,7 @@
 				06811F592267325300E857E2 /* YXYTabbarController.m in Sources */,
 				063B215A2269CFE500F3EDFB /* YSchedulingTableViewCell.m in Sources */,
 				063B213F2269AC2E00F3EDFB /* chargeVC.m in Sources */,
+				1F12BCC12270513100071E38 /* StarNewsDetailViewController.m in Sources */,
 				06811F1C22672FBE00E857E2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

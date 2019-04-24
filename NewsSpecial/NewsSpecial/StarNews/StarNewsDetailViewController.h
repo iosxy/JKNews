@@ -1,0 +1,19 @@
+//
+//  StarNewsDetailViewController.h
+//  NewsSpecial
+//
+//  Created by 欢瑞世纪 on 2019/4/24.
+//  Copyright © 2019 GetOn. All rights reserved.
+//
+
+#import "YBaseViewController.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface StarNewsDetailViewController : YBaseViewController
+
+@property(nonatomic,assign) NSNumber * contentId;
+
+@end
+
+NS_ASSUME_NONNULL_END
