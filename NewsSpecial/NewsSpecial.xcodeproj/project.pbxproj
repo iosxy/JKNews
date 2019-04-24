@@ -61,6 +61,7 @@
 		06CEB5AA22704E350061CF9F /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEB59C22704E340061CF9F /* MJPropertyKey.m */; };
 		06CEB5AB22704E350061CF9F /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEB59E22704E340061CF9F /* MJDictionaryCache.m */; };
 		06CEB5AC22704E350061CF9F /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEB5A122704E340061CF9F /* MJFoundation.m */; };
+		06CEB5AF227065CB0061CF9F /* MainDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CEB5AD227065CA0061CF9F /* MainDetailVC.m */; };
 		06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE8831226F1C4A00D7D843 /* UserModel.m */; };
 		1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCAB226F159E00071E38 /* StarBallDetailViewController.m */; };
 		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
@@ -196,6 +197,8 @@
 		06CEB59F22704E340061CF9F /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		06CEB5A022704E340061CF9F /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		06CEB5A122704E340061CF9F /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		06CEB5AD227065CA0061CF9F /* MainDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDetailVC.m; sourceTree = "<group>"; };
+		06CEB5AE227065CA0061CF9F /* MainDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDetailVC.h; sourceTree = "<group>"; };
 		06FE8830226F1C4A00D7D843 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		06FE8831226F1C4A00D7D843 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		1F12BCAA226F159E00071E38 /* StarBallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarBallDetailViewController.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				063B21342269AC2E00F3EDFB /* MineTableViewCell2.xib */,
 				06FE8830226F1C4A00D7D843 /* UserModel.h */,
 				06FE8831226F1C4A00D7D843 /* UserModel.m */,
+				06CEB5AE227065CA0061CF9F /* MainDetailVC.h */,
+				06CEB5AD227065CA0061CF9F /* MainDetailVC.m */,
 			);
 			path = personInformation;
 			sourceTree = "<group>";
@@ -716,6 +721,7 @@
 				93E1E75E226C9860005B3B73 /* UICollectionView+demo.m in Sources */,
 				06811F5F2267325300E857E2 /* ClassViewController.m in Sources */,
 				1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */,
+				06CEB5AF227065CB0061CF9F /* MainDetailVC.m in Sources */,
 				93E1E75B226C9841005B3B73 /* UIView+clipCorner.m in Sources */,
 				063B21452269AC2E00F3EDFB /* MineTableViewCell2.m in Sources */,
 				93E1E73F226C90C5005B3B73 /* StarBallViewController.m in Sources */,

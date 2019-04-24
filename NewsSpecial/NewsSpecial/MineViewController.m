@@ -12,7 +12,7 @@
 #import "EditDataVC.h"
 #import "chargeVC.h"
 #import "LoginViewController.h"
-
+#import "MainDetailVC.h"
 
 #define SCREEN_SIZE [[UIScreen mainScreen] bounds].size
 @interface MineViewController ()
@@ -25,6 +25,7 @@
 {
     UITableView *_mineTableView;
     EditDataVC *_editDataVC;
+    NSString * _sizeStr;
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -48,8 +49,8 @@
 - (void)addDataSource
 {
     NSArray * arr0 = @[@"头像"];
-    NSArray * arr1 = @[@{@"title":@"充值",@"image":@"kefu"},@{@"title":@"收益",@"image":@"kefu"}];
-    NSArray * arr2 = @[@{@"title":@"认证",@"image":@"kefu"},@{@"title":@"设置",@"image":@"kefu"}];
+    NSArray * arr1 = @[@{@"title":@"用户协议",@"image":@"用户协议"},@{@"title":@"清空缓存",@"image":@"清空缓存"}];
+    NSArray * arr2 = @[@{@"title":@"意见反馈",@"image":@"意见反馈"},@{@"title":@"退出登录",@"image":@"退出登录"}];
     [self.listArray addObject:arr0];
     [self.listArray addObject:arr1];
     [self.listArray addObject:arr2];
@@ -138,31 +139,65 @@
         
     }else if (indexPath.section == 1 && indexPath.row == 0)
     {
-        //充值
-        chargeVC * charge = [[chargeVC alloc]init];
-        charge.title = @"充值";
-        [self.navigationController pushViewController:charge animated:YES];
+        MainDetailVC * vc = [[MainDetailVC alloc]init];
+        vc.name = @"用户协议";
+        [self.navigationController pushViewController:vc animated:NO];
         
     }else if (indexPath.section == 1 && indexPath.row == 1)
     {
-        //收益
-        
-        
-        
+        [self clearButtonClick];
         
     }else if (indexPath.section == 2 && indexPath.row == 0)
     {
-        //认证
+        if (_isLogin == NO) {
+            [self.view showLoadingMeg:@"请先登录" time:1];
+            return;
+        }
+        MainDetailVC * vc = [[MainDetailVC alloc]init];
+        vc.name = @"意见反馈";
+        [self.navigationController pushViewController:vc animated:NO];
         
     }else {
-        //设置
-        
+       //退出登录
+        MainDetailVC * vc = [[MainDetailVC alloc]init];
+        vc.name = @"退出登录";
+        [self.navigationController pushViewController:vc animated:NO];
         
     }
     
 }
-
-
+- (void)clearButtonClick
+{
+    [[SDImageCache sharedImageCache]clearDisk];
+    [[SDImageCache sharedImageCache]clearDisk];
+    [self.view showLoadingMeg:@"清空缓存成功" time:1];
+    _sizeStr = [NSString stringWithFormat:@"%0.2fM",[self folderSizeAtPath:[NSString stringWithFormat:@"%@/Library/Caches/default",NSHomeDirectory()]]];
+}
+- (float ) folderSizeAtPath:(NSString*) folderPath{
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if (![manager fileExistsAtPath:folderPath])
+        return 0;
+    //通过枚举遍历法遍历文件夹中的所有文件
+    //创建枚举遍历器
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    //首先声明文件名称、文件大小
+    NSString* fileName;
+    long long folderSize = 0;
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        //得到当前遍历文件的路径
+        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        //调用封装好的获取单个文件大小的方法
+        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+    }
+    return folderSize/(1024.0*1024.0);//转换为多少M进行返回
+}
+- (long long) fileSizeAtPath:(NSString*) filePath{
+    NSFileManager* manager = [NSFileManager defaultManager];
+    if ([manager fileExistsAtPath:filePath]){
+        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+    }
+    return 0;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
