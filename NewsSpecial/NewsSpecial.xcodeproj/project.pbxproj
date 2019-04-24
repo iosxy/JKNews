@@ -68,6 +68,7 @@
 		1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */; };
 		1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCBC2270070000071E38 /* NewsTableViewCell.m */; };
 		1FBCAA4F22705C0A0065BDBC /* StarNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */; };
+		1FBCAA5822706B200065BDBC /* YWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCAA5722706B200065BDBC /* YWebViewController.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
@@ -210,6 +211,8 @@
 		1F12BCBC2270070000071E38 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		1FBCAA4D22705C0A0065BDBC /* StarNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarNewsDetailViewController.h; sourceTree = "<group>"; };
 		1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarNewsDetailViewController.m; sourceTree = "<group>"; };
+		1FBCAA5622706B200065BDBC /* YWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWebViewController.h; sourceTree = "<group>"; };
+		1FBCAA5722706B200065BDBC /* YWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWebViewController.m; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -519,6 +522,8 @@
 				1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */,
 				93E1E746226C90F2005B3B73 /* StarLittleVideoViewController.h */,
 				93E1E747226C90F2005B3B73 /* StarLittleVideoViewController.m */,
+				1FBCAA5622706B200065BDBC /* YWebViewController.h */,
+				1FBCAA5722706B200065BDBC /* YWebViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -731,6 +736,7 @@
 				06811F5B2267325300E857E2 /* UIView+MBProgressHUD.m in Sources */,
 				063B21422269AC2E00F3EDFB /* NinaBaseView.m in Sources */,
 				93E1E74B226C9292005B3B73 /* DemoViewController.m in Sources */,
+				1FBCAA5822706B200065BDBC /* YWebViewController.m in Sources */,
 				06811F612267325300E857E2 /* CartViewController.m in Sources */,
 				06CEB5AC22704E350061CF9F /* MJFoundation.m in Sources */,
 				93E1E765226C9F97005B3B73 /* StarRangkingCell.m in Sources */,

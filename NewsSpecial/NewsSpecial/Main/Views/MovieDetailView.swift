@@ -65,15 +65,12 @@ class MovieDetailView: UIView {
     
     @IBAction func play(_ sender: Any) {
         let movie = item!["detail"]["movie"] != .null ? item!["detail"]["movie"] : item!["detail"]["tv"]
-        let url = movie["url"].url
-        if url != nil && !(url?.absoluteString.isEmpty)! {
-//            let vc = WebViewController()
-//            //vc.loadURL(url)
-//            vc.loadURL(url, contentId: item!["id"].stringValue)
-//            Utils.getNavigationController().pushViewController(vc, animated: true)
-            
-            
-            
+        let url = movie["url"].stringValue
+        if url != "" {
+
+            let vc = YWebViewController()
+            vc.loadUrl(url)
+            self.nav.pushViewController(vc, animated: true)
         }
     }
 
