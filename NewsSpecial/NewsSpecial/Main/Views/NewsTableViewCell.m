@@ -18,9 +18,10 @@
     
 }
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
    
-    if (self =  [super initWithFrame:frame]) {
+    if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         _title = [UILabel new];
         _title.text = @"标题";

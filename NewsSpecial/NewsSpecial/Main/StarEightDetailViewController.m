@@ -31,16 +31,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0 ) {
-        NewsTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"title"];
+        NewsTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"title" forIndexPath:indexPath];
         
         return cell;
         
     }else if (indexPath.row == 1) {
-        NewsTextTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"text"];
+        NewsTextTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"text" forIndexPath:indexPath];
         
         return cell;
     }else {
-        NewsImageTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"image"];
+        NewsImageTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"image" forIndexPath:indexPath];
         
         return cell;
         
