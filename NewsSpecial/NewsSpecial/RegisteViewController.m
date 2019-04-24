@@ -7,7 +7,7 @@
 //
 
 #import "RegisteViewController.h"
-//#import "MainDetailVC.h"
+#import "MainDetailVC.h"
 #define NUMPIC @"http://u1.tiyufeng.com/captcha?clientToken=7c98ddd1d8cb729bf66791a192b43748&randomParam=1461671598194"
 @interface RegisteViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTf;
@@ -32,9 +32,9 @@
 - (IBAction)userAgreement:(UIButton *)sender {
     //用户协议
 
-//    MainDetailVC * vc = [[MainDetailVC alloc]init];
-//    vc.name = @"用户协议";
-//    [self.navigationController pushViewController:vc animated:NO];
+    MainDetailVC * vc = [[MainDetailVC alloc]init];
+    vc.name = @"用户协议";
+    [self.navigationController pushViewController:vc animated:NO];
     
 }
 
