@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class MovieDetailView: UIView {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var coverImageView: UIImageView!
@@ -32,13 +32,13 @@ class MovieDetailView: UIView {
     @IBOutlet weak var photoContentView: UIScrollView!
     
     @IBOutlet weak var voteButton: UIButton!
-//    var item: JSON? = nil
-//    var movie: JSON? = nil
+    var item: JSON? = nil
+    var movie: JSON? = nil
 //    var viewDidLoad : shareBlock?
     let shadowLayer = CAShapeLayer()
     var id: String? = nil
     var type: String? = nil
-    
+    @objc public var nav : UINavigationController!
     weak var tableView: UITableView? = nil
     
     override func awakeFromNib() {
@@ -63,16 +63,19 @@ class MovieDetailView: UIView {
         
     }
     
-//    @IBAction func play(_ sender: Any) {
-//        let movie = item!["detail"]["movie"] != .null ? item!["detail"]["movie"] : item!["detail"]["tv"]
-//        let url = movie["url"].url
-//        if url != nil && !(url?.absoluteString.isEmpty)! {
+    @IBAction func play(_ sender: Any) {
+        let movie = item!["detail"]["movie"] != .null ? item!["detail"]["movie"] : item!["detail"]["tv"]
+        let url = movie["url"].url
+        if url != nil && !(url?.absoluteString.isEmpty)! {
 //            let vc = WebViewController()
 //            //vc.loadURL(url)
 //            vc.loadURL(url, contentId: item!["id"].stringValue)
 //            Utils.getNavigationController().pushViewController(vc, animated: true)
-//        }
-//    }
+            
+            
+            
+        }
+    }
 
     @IBAction func expandDescription(_ sender: Any) {
         tableView?.beginUpdates()
@@ -83,8 +86,18 @@ class MovieDetailView: UIView {
         
     }
     
-//    func loadDataWithId(id : String) {
-//
+    @objc public func loadDataWithId(id : String) {
+
+        YCHNetworking.postStartRequest(fromUrl: "http://ywapp.hryouxi.com/yuwanapi/app/getContent", andParamter: ["id" : id , "userId" : "" ]) { (data, error) in
+          
+            let dic = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 1))
+            let json = JSON.init(dic)
+            self.loadItem(json["data"])
+            
+        };
+        
+        
+        
 //        HRAPI_NEW.post(YWNETNEW_getContent, ["id" : id , "userId" : HRAPI_NEW.getUserModels()?.id == nil ? "" : HRAPI_NEW.getUserModels()?.id ]).then {[weak self] item -> Void in
 //
 //            self?.loadItem(item)
@@ -94,94 +107,44 @@ class MovieDetailView: UIView {
 //                    self.viewDidLoad!(false)
 //                }
 //        }
-//
-//    }
+
+    }
     
-    
-//    func laodRank(rank : NSNumber) -> Void {
-//        if rank.intValue < 51 && rank.intValue > 0{
-//
-//            var newTitle = ""
-//
-//            newTitle = "本周热度排名：" + rank.stringValue
-//
-//            var  attributeString = rankLable.getAttributeStringWithString(newTitle, lineSpace: 0)
-//            attributeString = HRAttributeStringTool.changeString(toAttributeString: attributeString, range: NSMakeRange(0, newTitle.count), color: HEXCOLOR(0x212121))
-//
-//            let newTitleStr = newTitle as NSString
-//            let range = newTitleStr.range(of: rank.stringValue)
-//
-//            attributeString = HRAttributeStringTool.changeString(toAttributeString: attributeString, range: range, color: HEXCOLOR(0x48b9fe))
-//
-//            self.rankLable.attributedText = attributeString
-//
-//
-//        }
-//    }
-    
-//    func loadRankData(id : String){
-//
-//        HRAPI_NEW.post(YWNETNEW_getContent, ["id" : id , "userId" : HRAPI_NEW.getUserModels()?.id == nil ? "" : HRAPI_NEW.getUserModels()?.id ]).then {[weak self] item -> Void in
-//
-//            if item["rank"].intValue < 51 && item["rank"].intValue > 0 {
-//                self?.laodRank(rank: item["rank"].numberValue)
-//            }
-//
-//
-//            if self?.viewDidLoad != nil {
-//                self?.viewDidLoad!(true)
-//            }
-//
-//            self?.seeCountLabel.text = Utils.shortNumberString(item["number"].numberValue)
-//
-//            }.catch { (error) in
-//                if self.viewDidLoad != nil {
-//                    self.viewDidLoad!(false)
-//                }
-//        }
-//
-//    }
-    
-//    func loadItem(_ item: JSON) {
-//
-//        self.loadRankData(id: item["id"].stringValue)
-//        self.id = item["id"].stringValue
-//        self.item = item
-//        if (item["detail"]["movie"] != .null) {
-//            self.type = "movie"
-//        } else {
-//            self.type = "tv"
-//        }
-//        let movie = item["detail"][self.type!]
-//        self.movie = movie
-//        self.seeCountLabel.text = Utils.shortNumberString(item["number"].numberValue)
-//        self.backgroundImageView.yw_setImage(with: movie["background"]["url"].url)
-//        self.coverImageView.yw_setImage(with: movie["cover"]["url"].url)
-//
-//        self.titleLabel.text = movie["name"].stringValue
-//        self.directorLabel.text = movie["directors"].stringValue
-//        self.mainActorLabel.text = movie["majorStar"].stringValue
-//        self.typeLabel.text = movie["type"].stringValue
-//        if !movie["publishTimeStr"].stringValue.isEmpty {
-//            self.releaseDateLabel.text = movie["publishTimeStr"].stringValue
-//        } else {
-//            self.releaseDateLabel.text = Utils.getDate(movie["publishTime"].int64Value)
-//        }
-//
-//        self.descriptionLabel.text = movie["description"].stringValue
-//        if Utils.lineNumber(label: self.descriptionLabel, text: movie["description"].stringValue) >= 5 {
-//            self.expandButton.isHidden = false
-//        } else {
-//            self.expandButton.isHidden = true
-//        }
-//        let url = movie["url"].url
-//        if url != nil && !(url?.absoluteString.isEmpty)! {
-//            self.playButton.isHidden = false
-//        } else {
-//            self.playButton.isHidden = true
-//        }
-//        var lastView: HRVerticalWorkView? = nil
-//        for starItem in movie["starItems"].arrayValue {
+    func loadItem(_ item: JSON ) {
+
+        self.id = item["id"].stringValue
+        self.item = item
+        if (item["detail"]["movie"] != .null) {
+            self.type = "movie"
+        } else {
+            self.type = "tv"
+        }
+        let movie = item["detail"][self.type!]
+        self.movie = movie
+        self.seeCountLabel.text = item["number"].stringValue
+        self.backgroundImageView.ysd_setImage(with: movie["background"]["url"].stringValue)
+        self.coverImageView.ysd_setImage(with: movie["cover"]["url"].stringValue)
+
+        self.titleLabel.text = movie["name"].stringValue
+        self.directorLabel.text = movie["directors"].stringValue
+        self.mainActorLabel.text = movie["majorStar"].stringValue
+        self.typeLabel.text = movie["type"].stringValue
+        if !movie["publishTimeStr"].stringValue.isEmpty {
+            self.releaseDateLabel.text = movie["publishTimeStr"].stringValue
+        } else {
+            //self.releaseDateLabel.text = Utils.getDate(movie["publishTime"].int64Value)
+        }
+
+        self.descriptionLabel.text = movie["description"].stringValue
+        self.expandButton.isHidden = true
+        let url = movie["url"].url
+        if url != nil && !(url?.absoluteString.isEmpty)! {
+            self.playButton.isHidden = false
+        } else {
+            self.playButton.isHidden = true
+        }
+    //    var lastView: HRVerticalWorkView? = nil
+        for starItem in movie["starItems"].arrayValue {
 //            let view = HRVerticalWorkView.loadFromNib()
 //            view.loadStarJsonItem(starItem)
 //
@@ -200,8 +163,8 @@ class MovieDetailView: UIView {
 //            })
 //
 //            lastView = view
-//        }
-//
+        }
+
 //        for (i,photo) in movie["photos"].arrayValue.enumerated() {
 //            let aspectRatio = Utils.calcAspectRatio(image: photo)
 //
@@ -217,41 +180,16 @@ class MovieDetailView: UIView {
 //            imageView.tag = i
 //            imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tap(_:))))
 //        }
-//
-//
-//    }
+
+
+    }
     @IBAction func voteClick(_ sender: Any) {
         
-        
-//        let vcs = Utils.getNavigationController().viewControllers
-//        for vc in 0...vcs.count - 1{
-//
-//            if vcs[vc] as? HRHomeRankingViewController != nil {
-//
-//                Utils.getNavigationController().popToViewController(vcs[vc], animated: true)
-//                return
-//            }
-//
-//        }
-//
-//        let rankingVc = HRHomeRankingViewController()
-//        rankingVc.defaultPage = 2
-//        Utils.getNavigationController().pushViewController(rankingVc, animated: true)
-//
+
     }
     
     func getContentId() -> String {
         return id!
     }
-    
-//    @objc func tap(_ sender: UITapGestureRecognizer) {
-//        let vc = HRAlbumViewController()
-//        Utils.getNavigationController().pushViewController(vc, animated: true)
-//        vc.loadItems(self.movie!["photos"].arrayValue, page: sender.view!.tag)
-//    }
-//
-//    func share() {
-//       HRAPI.share(title: titleLabel.text!, suffix: " - 娱丸卡", description: descriptionLabel.text!, image: backgroundImageView.image!, url: YW_URL_SHARE +  "/detail/" + type! + ".html?id=" + id!)
-//
-//    }
+
 }

@@ -8,6 +8,7 @@
 
 #import "StarRankingViewController.h"
 #import "StarRangkingCell.h"
+#import "StarRankingDetailViewController.h"
 @interface StarRankingViewController ()
 
 @end
@@ -76,5 +77,17 @@
     
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    
+    StarRankingDetailViewController * vc = [[StarRankingDetailViewController alloc]init];
+    vc.hidesBottomBarWhenPushed = true;
+    NSDictionary * dic = self.dataList[indexPath.row];
+    vc.contentId = dic[@"id"];
+    [self.navigationController pushViewController:vc animated:true];
+    
+    
+    
+}
 @end
