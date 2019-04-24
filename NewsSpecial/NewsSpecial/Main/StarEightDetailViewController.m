@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"文章详情";
     
     [self.tableView registerClass:[NewsTableViewCell class] forCellReuseIdentifier:@"title"];
     [self.tableView registerClass:[NewsTextTableViewCell class] forCellReuseIdentifier:@"text"];
