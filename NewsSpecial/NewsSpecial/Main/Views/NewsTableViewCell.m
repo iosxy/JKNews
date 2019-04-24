@@ -64,6 +64,25 @@
     _title.text = item[@"title"];
     _time.text = item[@"publish_time"];
 }
+- (void)loadNewData:(NSDictionary *)item{
+    
+    _title.text = item[@"title"];
+    _from.text = item[@"from"];
+    if ([_from.text isEqualToString:@"娱丸官方"]) {
+        _from.text = @"官方";
+    }
+    _time.text = [self getTimeFromTimestamp:[item[@"time"] doubleValue]];
+
+}
+- (NSString *)getTimeFromTimestamp:(double)time{
+    time = time / 1000;
+    NSDate * myDate=[NSDate dateWithTimeIntervalSince1970:time];
+    
+    NSDateFormatter * formatter=[[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *timeStr=[formatter stringFromDate:myDate];
+    return timeStr;
+}
 @end
 @implementation NewsTextTableViewCell{
     
@@ -79,7 +98,7 @@
         
         _content = [UILabel new];
         _content.font = [UIFont systemFontOfSize:14];
-        _content.text = @"文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容";
+        _content.text = @"";
         _content.numberOfLines = 0;
         [self.contentView addSubview:_content];
         [_content mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -117,6 +136,9 @@
     _content.text = item;
     
 }
+- (void)loadNewData:(NSDictionary *)item{
+    _content.text = item[@"text"];
+}
 @end
 
 @implementation NewsImageTableViewCell{
@@ -138,7 +160,7 @@
             make.left.equalTo(@(12));
             make.top.equalTo(@(6));
             make.right.bottom.equalTo(self.contentView).offset(-6);
-            
+            make.height.mas_lessThanOrEqualTo(300);
         }];
         
     }
@@ -149,6 +171,10 @@
 }
 - (void)loadData:(NSDictionary *)item {
     [_contentImaageView ysd_setImageWithString:item[@"src"]];
+}
+- (void)loadNewData:(NSDictionary *)item{
+    [_contentImaageView ysd_setImageWithString:item[@"image"][@"url"]];
+    
 }
 @end
 

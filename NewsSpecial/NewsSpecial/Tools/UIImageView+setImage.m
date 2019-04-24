@@ -26,7 +26,7 @@
         
     }
     
-    [self sd_setImageWithURL:[NSURL URLWithString:url]];
+    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"logo"]];
     
 }
 @end

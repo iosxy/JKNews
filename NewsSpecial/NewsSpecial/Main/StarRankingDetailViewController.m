@@ -27,6 +27,8 @@
     
     
     MovieDetailView * view = [[[NSBundle mainBundle]loadNibNamed:@"MovieDetailView" owner:self options:nil]lastObject];
+    view.nav = self.navigationController;
+    [view loadDataWithIdWithId:self.contentId.stringValue];
     [self.scrollView addSubview:view];
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [view mas_makeConstraints:^(MASConstraintMaker *make) {

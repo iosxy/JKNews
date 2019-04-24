@@ -10,7 +10,7 @@
 #import "YPhotoTableViewCell.h"
 #import "YLittlePhotoTableViewCell.h"
 #import "MJRefresh.h"
-
+#import "StarNewsDetailViewController.h"
 #define YNEWS_RUL @"http://ywapp.hryouxi.com/yuwanapi/app/listEveryDayStarNews"
 @interface ClassViewController ()
 /** 当前新闻*/
@@ -84,6 +84,20 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     NSDictionary * data = self.dataList[indexPath.row];
+    
+    StarNewsDetailViewController * vc = [[StarNewsDetailViewController alloc]init];
+    
+    NSString * contentID = data[@"url"];
+    NSCharacterSet* nonDigits =[[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    int remainSecond =[[contentID stringByTrimmingCharactersInSet:nonDigits] intValue];
+    NSLog(@" num %d ",remainSecond);
+ 
+    vc.contentId = @(remainSecond);
+    vc.hidesBottomBarWhenPushed = true;
+    [self.navigationController pushViewController:vc animated:true];
+    
+    
+    
 //    YPhotoCommentViewController * comment = [[YPhotoCommentViewController alloc]init];
 //    comment.hidesBottomBarWhenPushed = YES;
 //    comment.data = data;

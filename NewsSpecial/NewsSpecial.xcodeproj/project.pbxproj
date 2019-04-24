@@ -67,6 +67,7 @@
 		1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F12BCAC226F159E00071E38 /* StarBallDetailViewController.xib */; };
 		1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */; };
 		1F12BCBD2270070000071E38 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F12BCBC2270070000071E38 /* NewsTableViewCell.m */; };
+		1FBCAA4F22705C0A0065BDBC /* StarNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
 		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
@@ -207,6 +208,8 @@
 		1F12BCB92270069A00071E38 /* StarEightDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarEightDetailViewController.m; sourceTree = "<group>"; };
 		1F12BCBB2270070000071E38 /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		1F12BCBC2270070000071E38 /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		1FBCAA4D22705C0A0065BDBC /* StarNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarNewsDetailViewController.h; sourceTree = "<group>"; };
+		1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarNewsDetailViewController.m; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
 		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -392,6 +395,8 @@
 				06811F402267325100E857E2 /* FirstViewController.m */,
 				06811F382267325000E857E2 /* MineViewController.h */,
 				06811F372267325000E857E2 /* MineViewController.m */,
+				1FBCAA4D22705C0A0065BDBC /* StarNewsDetailViewController.h */,
+				1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */,
 				06811F452267325200E857E2 /* SDRefresh */,
 				06811F502267325200E857E2 /* UIView+Additions.h */,
 				06811F3E2267325100E857E2 /* UIView+Additions.m */,
@@ -754,6 +759,7 @@
 				06CEB58622704B240061CF9F /* RegisteViewController.m in Sources */,
 				063B21432269AC2E00F3EDFB /* DataCel1l.m in Sources */,
 				93E1E758226C9830005B3B73 /* UIImageView+setImage.m in Sources */,
+				1FBCAA4F22705C0A0065BDBC /* StarNewsDetailViewController.m in Sources */,
 				1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
 				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,

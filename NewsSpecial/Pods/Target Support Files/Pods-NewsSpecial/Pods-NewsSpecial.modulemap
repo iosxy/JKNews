@@ -1,0 +1,6 @@
+module Pods_NewsSpecial {
+  umbrella header "Pods-NewsSpecial-umbrella.h"
+
+  export *
+  module * { export * }
+}
