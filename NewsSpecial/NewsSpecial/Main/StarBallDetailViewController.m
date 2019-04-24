@@ -10,6 +10,13 @@
 
 @interface StarBallDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *cover;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *hot;
+@property (weak, nonatomic) IBOutlet UILabel *introduce;
+@property (weak, nonatomic) IBOutlet UILabel *infoLeft;
+@property (weak, nonatomic) IBOutlet UILabel *infoRight;
+@property (weak, nonatomic) IBOutlet UILabel *soccer;
 
 @end
 
@@ -20,20 +27,16 @@
    
     self.title = @"星球";
     
-    YuwanCardHeaderView * view = [[[NSBundle mainBundle]loadNibNamed:@"YuwanCardHeaderView" owner:self options:nil]lastObject];
-    [self.scrollView addSubview:view];
-    view.translatesAutoresizingMaskIntoConstraints = NO;
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.mas_equalTo(self.scrollView);
-        make.width.mas_equalTo(SCREEN_WIDTH);
-        make.bottom.mas_lessThanOrEqualTo(self.scrollView);
-    }];
+ 
+    [self reloadData];
+    
+}
+
+-(void)reloadData{
     
     
     
 }
-
-
 
 
 @end

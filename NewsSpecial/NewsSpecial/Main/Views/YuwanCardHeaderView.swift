@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class YuwanCardHeaderView: UIView {
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,7 +20,7 @@ class YuwanCardHeaderView: UIView {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var subscribeButton: UIButton!
     
-  //  let starDetailView = StarDetailView.loadFromNib()
+ //   let starDetailView = StarDetailView.loadFromNib()
     
     @IBOutlet weak var detailContainerView: UIView!
     
@@ -86,41 +86,43 @@ class YuwanCardHeaderView: UIView {
 //    func loadStar(_ star: JSON) {
 //
 //
-//        HRAPI_NEW.post(YWNETNEW_getStar, [ "starId" : star["star"]["id"].stringValue , "userId" : HRAPI_NEW.getUserModels()?.id]).then{ response -> Void in
-//            self.bindStar(response)
-//            self.followerCountLabel.text = Utils.shortNumberString(response["star"]["likecount"].numberValue)
-//
-//        }
-//
-//       // YWAPI.get("/star/star", ["starId": star["star"]["id"].stringValue]).then
+////        HRAPI_NEW.post(YWNETNEW_getStar, [ "starId" : star["star"]["id"].stringValue , "userId" : HRAPI_NEW.getUserModels()?.id]).then{ response -> Void in
+////            self.bindStar(response)
+////            self.followerCountLabel.text = Utils.shortNumberString(response["star"]["likecount"].numberValue)
 ////
-////        YWAPI_NEW.post(YWNETNEW_getStarLikeCount, ["starId" : star["star"]["id"].stringValue]).then { respone -> Void in
 ////        }
 ////
+////       // YWAPI.get("/star/star", ["starId": star["star"]["id"].stringValue]).then
+//////
+//////        YWAPI_NEW.post(YWNETNEW_getStarLikeCount, ["starId" : star["star"]["id"].stringValue]).then { respone -> Void in
+//////        }
+//////
 //
 //
 //    }
 //    func bindStar(_ star: JSON) {
-//        self.star = star
 //        defaultFollowStatus = star["isSubscribe"].boolValue
 //        subscribeButton.isSelected = star["isSubscribe"].boolValue
 //        nameLabel.text = star["star"]["name"].stringValue
-//        photoImageView.yw_setImage(with: star["star"]["avatar"].url)
+//        photoImageView.ysd_setImage(with: star["star"]["avatar"].stringValue)
 //        if (star["star"]["gender"].stringValue == "FEMALE") {
 //            genderImageView.image = #imageLiteral(resourceName: "card_icon_girl")
 //        }
 //        let descriptionString = NSMutableAttributedString()
-//      descriptionString.append(NSMutableAttributedString(string: "个人简介：", attributes: [NSAttributedStringKey.foregroundColor: UIColor(white: 0x73/255.0, alpha: 1)]))
-//      descriptionString.append(NSMutableAttributedString(string: star["star"]["description"].stringValue, attributes: [NSAttributedStringKey.foregroundColor: UIColor(white: 0x0f/255.0, alpha: 1)]))
+//        descriptionString.append(NSMutableAttributedString(string: "个人简介：", attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 0x73/255.0, alpha: 1)]))
+//        descriptionString.append(NSMutableAttributedString(string: star["star"]["description"].stringValue, attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 0x0f/255.0, alpha: 1)]))
 //
 //        let style = NSMutableParagraphStyle()
 //        style.lineSpacing = 7
-//      descriptionString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSRange(location: 0, length: descriptionString.string.characters.count))
+//        descriptionString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: descriptionString.string.characters.count))
 //
 //        descriptionLabel.attributedText = descriptionString
 //
 //
 //        let basicInfoView = starDetailView.basicInfoView!
+//
+//
+//
 //        if !star["star"]["chineseName"].stringValue.isEmpty {
 //            basicInfoView.addItem(name: "中文名：", value: star["star"]["chineseName"].stringValue)
 //        }
@@ -154,7 +156,7 @@ class YuwanCardHeaderView: UIView {
 //        if !star["star"]["birthDateStr"].stringValue.isEmpty {
 //            basicInfoView.addItem(name: "生日：", value: star["star"]["birthDateStr"].stringValue)
 //        } else if star["star"]["birthDate"].int64Value > 0 {
-//            basicInfoView.addItem(name: "生日：", value: Utils.getDate(star["star"]["birthDate"].int64Value))
+////            basicInfoView.addItem(name: "生日：", value: Utils.getDate(star["star"]["birthDate"].int64Value))
 //
 //        }
 //        if !star["star"]["career"].stringValue.isEmpty {
