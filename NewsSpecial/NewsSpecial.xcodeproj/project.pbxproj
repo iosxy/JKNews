@@ -70,7 +70,15 @@
 		1FBCAA4F22705C0A0065BDBC /* StarNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */; };
 		1FBCAA5822706B200065BDBC /* YWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCAA5722706B200065BDBC /* YWebViewController.m */; };
 		414357489405519788D86A05 /* libPods-NewsSpecial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2CF6E9FFDEA463D44B4368 /* libPods-NewsSpecial.a */; };
+		9325C62C2270A6FD000335FC /* TCSendTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9325C62A2270A6FD000335FC /* TCSendTextView.xib */; };
+		9325C62D2270A6FD000335FC /* TCSendTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325C62B2270A6FD000335FC /* TCSendTextView.m */; };
+		9325C6302270A70B000335FC /* TCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325C62E2270A70B000335FC /* TCTextView.m */; };
+		9325C6332270A86E000335FC /* TalkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325C6322270A86E000335FC /* TalkModel.m */; };
+		9325C63A2270A9AB000335FC /* NSKeyedArchiver+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325C6392270A9AA000335FC /* NSKeyedArchiver+TCExtension.m */; };
+		9325C63E2270AC6C000335FC /* TalkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9325C63C2270AC6C000335FC /* TalkCell.m */; };
+		9325C63F2270AC6C000335FC /* TalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9325C63D2270AC6C000335FC /* TalkCell.xib */; };
 		93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */; };
+		93C5F50122733AF4006A7710 /* fabuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C5F50022733AF3006A7710 /* fabuViewController.m */; };
 		93C8A4DA226F6184000DC9F7 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */; };
 		93C8A4DB226F6184000DC9F7 /* MovieDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C8A4D9226F6184000DC9F7 /* MovieDetailView.xib */; };
 		93C8A4DF226F6628000DC9F7 /* StarRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8A4DD226F6628000DC9F7 /* StarRankingDetailViewController.m */; };
@@ -213,8 +221,22 @@
 		1FBCAA4E22705C0A0065BDBC /* StarNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarNewsDetailViewController.m; sourceTree = "<group>"; };
 		1FBCAA5622706B200065BDBC /* YWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWebViewController.h; sourceTree = "<group>"; };
 		1FBCAA5722706B200065BDBC /* YWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWebViewController.m; sourceTree = "<group>"; };
+		9325C6292270A6FD000335FC /* TCSendTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSendTextView.h; sourceTree = "<group>"; };
+		9325C62A2270A6FD000335FC /* TCSendTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TCSendTextView.xib; sourceTree = "<group>"; };
+		9325C62B2270A6FD000335FC /* TCSendTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSendTextView.m; sourceTree = "<group>"; };
+		9325C62E2270A70B000335FC /* TCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTextView.m; sourceTree = "<group>"; };
+		9325C62F2270A70B000335FC /* TCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTextView.h; sourceTree = "<group>"; };
+		9325C6312270A86E000335FC /* TalkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkModel.h; sourceTree = "<group>"; };
+		9325C6322270A86E000335FC /* TalkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkModel.m; sourceTree = "<group>"; };
+		9325C6382270A9AA000335FC /* NSKeyedArchiver+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+TCExtension.h"; sourceTree = "<group>"; };
+		9325C6392270A9AA000335FC /* NSKeyedArchiver+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+TCExtension.m"; sourceTree = "<group>"; };
+		9325C63B2270AC6C000335FC /* TalkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkCell.h; sourceTree = "<group>"; };
+		9325C63C2270AC6C000335FC /* TalkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkCell.m; sourceTree = "<group>"; };
+		9325C63D2270AC6C000335FC /* TalkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkCell.xib; sourceTree = "<group>"; };
 		93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPhotoTableViewCell.m; sourceTree = "<group>"; };
 		93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPhotoTableViewCell.h; sourceTree = "<group>"; };
+		93C5F4FF22733AF3006A7710 /* fabuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fabuViewController.h; sourceTree = "<group>"; };
+		93C5F50022733AF3006A7710 /* fabuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fabuViewController.m; sourceTree = "<group>"; };
 		93C8A4D7226F6183000DC9F7 /* NewsSpecial-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewsSpecial-Bridging-Header.h"; sourceTree = "<group>"; };
 		93C8A4D8226F6184000DC9F7 /* MovieDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		93C8A4D9226F6184000DC9F7 /* MovieDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailView.xib; sourceTree = "<group>"; };
@@ -272,6 +294,9 @@
 		063B21212269AC2D00F3EDFB /* recharge */ = {
 			isa = PBXGroup;
 			children = (
+				9325C63B2270AC6C000335FC /* TalkCell.h */,
+				9325C63C2270AC6C000335FC /* TalkCell.m */,
+				9325C63D2270AC6C000335FC /* TalkCell.xib */,
 				063B21222269AC2D00F3EDFB /* chargeVC.m */,
 				063B21232269AC2D00F3EDFB /* chargeVC.h */,
 			);
@@ -324,6 +349,8 @@
 		063B214E2269B52800F3EDFB /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9325C6382270A9AA000335FC /* NSKeyedArchiver+TCExtension.h */,
+				9325C6392270A9AA000335FC /* NSKeyedArchiver+TCExtension.m */,
 				063B214F2269B53B00F3EDFB /* View */,
 			);
 			path = Class;
@@ -332,6 +359,13 @@
 		063B214F2269B53B00F3EDFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9325C6312270A86E000335FC /* TalkModel.h */,
+				9325C6322270A86E000335FC /* TalkModel.m */,
+				9325C62F2270A70B000335FC /* TCTextView.h */,
+				9325C62E2270A70B000335FC /* TCTextView.m */,
+				9325C6292270A6FD000335FC /* TCSendTextView.h */,
+				9325C62B2270A6FD000335FC /* TCSendTextView.m */,
+				9325C62A2270A6FD000335FC /* TCSendTextView.xib */,
 				93AD2963226C846E00AB8F11 /* YPhotoTableViewCell.h */,
 				93AD2962226C846E00AB8F11 /* YPhotoTableViewCell.m */,
 				063B21532269BE0200F3EDFB /* YLittlePhotoTableViewCell.h */,
@@ -506,6 +540,8 @@
 		93E1E73C226C901B005B3B73 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				93C5F4FF22733AF3006A7710 /* fabuViewController.h */,
+				93C5F50022733AF3006A7710 /* fabuViewController.m */,
 				93E1E74C226C9509005B3B73 /* Views */,
 				93E1E73D226C90C5005B3B73 /* StarBallViewController.h */,
 				93E1E73E226C90C5005B3B73 /* StarBallViewController.m */,
@@ -646,6 +682,7 @@
 				06811F2422672FC000E857E2 /* Assets.xcassets in Resources */,
 				93E1E766226C9F97005B3B73 /* StarRangkingCell.xib in Resources */,
 				1F12BCAE226F159E00071E38 /* StarBallDetailViewController.xib in Resources */,
+				9325C62C2270A6FD000335FC /* TCSendTextView.xib in Resources */,
 				06CEB58722704B240061CF9F /* LoginViewController.xib in Resources */,
 				06811F2222672FBE00E857E2 /* Main.storyboard in Resources */,
 				06CEB58922704B240061CF9F /* RegisteViewController.xib in Resources */,
@@ -654,6 +691,7 @@
 				93E1E754226C9534005B3B73 /* StarBallCell.xib in Resources */,
 				063B21482269AC2E00F3EDFB /* MineTableViewCell2.xib in Resources */,
 				06811F632267325300E857E2 /* sdRefeshView_arrow@2x.png in Resources */,
+				9325C63F2270AC6C000335FC /* TalkCell.xib in Resources */,
 				06811F672267325300E857E2 /* 下拉刷新动态.gif in Resources */,
 				93E1E770226CA80C005B3B73 /* LittleVideoTableViewCell.xib in Resources */,
 			);
@@ -734,6 +772,7 @@
 				93E1E745226C90E9005B3B73 /* StarEightViewController.m in Sources */,
 				06811F6A2267325300E857E2 /* YCHNetworking.m in Sources */,
 				06811F5B2267325300E857E2 /* UIView+MBProgressHUD.m in Sources */,
+				9325C6302270A70B000335FC /* TCTextView.m in Sources */,
 				063B21422269AC2E00F3EDFB /* NinaBaseView.m in Sources */,
 				93E1E74B226C9292005B3B73 /* DemoViewController.m in Sources */,
 				1FBCAA5822706B200065BDBC /* YWebViewController.m in Sources */,
@@ -751,14 +790,18 @@
 				06FE8832226F1C4A00D7D843 /* UserModel.m in Sources */,
 				06CEB5A822704E350061CF9F /* NSObject+MJClass.m in Sources */,
 				1F12BCBA2270069A00071E38 /* StarEightDetailViewController.m in Sources */,
+				93C5F50122733AF4006A7710 /* fabuViewController.m in Sources */,
 				063B21412269AC2E00F3EDFB /* NinaPagerView.m in Sources */,
 				06811F642267325300E857E2 /* UIView+SDExtension.m in Sources */,
+				9325C6332270A86E000335FC /* TalkModel.m in Sources */,
 				063B21492269AC2E00F3EDFB /* MineTableViewCell1.m in Sources */,
 				93E1E753226C9534005B3B73 /* StarBallCell.m in Sources */,
 				06811F2A22672FC000E857E2 /* main.m in Sources */,
 				06811F652267325300E857E2 /* SDRefreshFooterView.m in Sources */,
+				9325C63A2270A9AB000335FC /* NSKeyedArchiver+TCExtension.m in Sources */,
 				06CEB5AA22704E350061CF9F /* MJPropertyKey.m in Sources */,
 				06811F5A2267325300E857E2 /* MineViewController.m in Sources */,
+				9325C63E2270AC6C000335FC /* TalkCell.m in Sources */,
 				93AD2964226C846E00AB8F11 /* YPhotoTableViewCell.m in Sources */,
 				06CEB5AB22704E350061CF9F /* MJDictionaryCache.m in Sources */,
 				06811F662267325300E857E2 /* SDRefreshView.m in Sources */,
@@ -769,6 +812,7 @@
 				1F12BCAD226F159E00071E38 /* StarBallDetailViewController.m in Sources */,
 				06811F602267325300E857E2 /* YBaseViewController.m in Sources */,
 				063B21552269BE0200F3EDFB /* YLittlePhotoTableViewCell.m in Sources */,
+				9325C62D2270A6FD000335FC /* TCSendTextView.m in Sources */,
 				06CEB5A922704E350061CF9F /* NSString+MJExtension.m in Sources */,
 				06CEB5A322704E340061CF9F /* NSObject+MJKeyValue.m in Sources */,
 				93C8A4E3226F67DA000DC9F7 /* YuwanCardHeaderView.swift in Sources */,
@@ -923,6 +967,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K96S8R47AN;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -934,12 +979,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GetOn.NewsSpecial;
+				PRODUCT_BUNDLE_IDENTIFIER = starnews.ych;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -949,6 +995,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K96S8R47AN;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -960,11 +1007,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GetOn.NewsSpecial;
+				PRODUCT_BUNDLE_IDENTIFIER = starnews.ych;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NewsSpecial/Main/Views/NewsSpecial-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

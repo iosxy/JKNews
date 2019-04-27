@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *zan;
 @property (weak, nonatomic) IBOutlet UIImageView *talk;
 @property (weak, nonatomic) IBOutlet UIImageView *playButton;
+@property (weak, nonatomic) IBOutlet UIImageView *like;
+@property (weak, nonatomic) IBOutlet UIImageView *report;
 
 @end
 

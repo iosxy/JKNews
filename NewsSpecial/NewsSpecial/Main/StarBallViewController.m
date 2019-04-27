@@ -97,6 +97,7 @@
     
     StarBallDetailViewController * vc = [[StarBallDetailViewController alloc]init];
     vc.hidesBottomBarWhenPushed = YES;
+    vc.contentId = self.dataList[indexPath.row][@"id"];
     [self.navigationController pushViewController:vc animated:true];
     
     

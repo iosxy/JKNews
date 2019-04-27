@@ -53,7 +53,7 @@
 //
 //    [webView loadHTMLString:htmlString baseURL:baseURL];
     
-    [webView loadRequest: [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"https://js.7018999.com/2019/ys2019.html"]]];
+    [webView loadRequest: [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"https://js.7018999.com/2019/ys424.html"]]];
     
     
 }

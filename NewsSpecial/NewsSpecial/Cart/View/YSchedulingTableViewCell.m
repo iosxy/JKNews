@@ -92,6 +92,22 @@
     didianImageView.image = [UIImage imageNamed:@"地点"];
     self.didianImageView = didianImageView;
     [bjView addSubview:self.didianImageView];
+    
+    UILabel * alertLabel = [UILabel new];
+    alertLabel.text = @"添加提醒";
+    alertLabel.font = [UIFont systemFontOfSize:14];
+    alertLabel.textColor = MainColor;
+    alertLabel.numberOfLines = 0;
+    
+    [self.contentView addSubview:alertLabel];
+    [alertLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView);
+        make.left.equalTo(@(12));
+        make.width.equalTo(@(50));
+    }];
+    
+    
+    
     [self setUpConstrains];
 }
 - (void)setUpConstrains {

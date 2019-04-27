@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface StarBallDetailViewController : UIViewController
 
 
-
+@property(nonatomic,assign) NSNumber * contentId;
 
 
 @end

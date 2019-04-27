@@ -133,6 +133,7 @@
     if ([self.authorLabel.text isEqualToString:@"娱丸官方"]) {
         self.authorLabel.text = @"官方";
     }
+    self.authorLabel.text = @"官方";
     NSString * timeStr = data[@"time"];
     self.timeLabel.text = [self getTimeFromTimestamp:timeStr.doubleValue];
     

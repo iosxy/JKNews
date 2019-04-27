@@ -67,10 +67,11 @@
 - (void)loadNewData:(NSDictionary *)item{
     
     _title.text = item[@"title"];
-    _from.text = item[@"from"];
-    if ([_from.text isEqualToString:@"娱丸官方"]) {
-        _from.text = @"官方";
-    }
+    _from.text = @"官方";
+ //   _from.text = item[@"from"];
+//    if ([_from.text isEqualToString:@"娱丸官方"]) {
+//        _from.text = @"官方";
+//    }
     _time.text = [self getTimeFromTimestamp:[item[@"time"] doubleValue]];
 
 }
